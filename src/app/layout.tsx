@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 /** 사이트 전역 메타데이터 */
 export const metadata: Metadata = {
   title: {
-    default: "Stock Blog - 나의 투자 일지",
-    template: "%s | Stock Blog",
+    default: "나의 투자일지",
+    template: "%s | 나의 투자일지",
   },
   description: "개인 투자 기록과 매매 복기, 포트폴리오 변화를 공유하는 투자 일지",
 };

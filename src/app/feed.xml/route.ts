@@ -22,7 +22,7 @@ export async function GET() {
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stock Blog - 나의 투자 일지</title>
+    <title>나의 투자일지</title>
     <link>${SITE_URL}</link>
     <description>개인 투자 기록과 매매 복기, 포트폴리오 변화를 공유하는 투자 일지</description>
     <language>ko</language>

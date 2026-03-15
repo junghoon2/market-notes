@@ -26,7 +26,7 @@ export default function Header({ posts = [] }: { posts?: Post[] }) {
           href="/"
           className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50"
         >
-          📈 Stock Blog
+          📈 나의 투자일지
         </Link>
 
         {/* 데스크톱 네비게이션 */}
