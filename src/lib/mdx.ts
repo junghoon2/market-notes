@@ -16,7 +16,7 @@ function getMdxFiles(dir: string): string[] {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       files.push(...getMdxFiles(fullPath));
-    } else if (entry.name.endsWith(".mdx")) {
+    } else if (entry.name.endsWith(".mdx") || entry.name.endsWith(".md")) {
       files.push(fullPath);
     }
   }
@@ -31,7 +31,9 @@ function parsePost(filePath: string): Post {
   const frontmatter = data as PostFrontmatter;
 
   // 파일명에서 슬러그 추출 (확장자 제거)
-  const slug = path.basename(filePath, ".mdx");
+  // .mdx 또는 .md 확장자 모두 지원
+  const ext = path.extname(filePath);
+  const slug = path.basename(filePath, ext);
 
   // 읽기 시간 계산
   const stats = readingTime(content);
@@ -63,7 +65,7 @@ export function getPostBySlug(slug: string): Post | undefined {
   const files = getMdxFiles(POSTS_DIR);
 
   for (const file of files) {
-    if (path.basename(file, ".mdx") === slug) {
+    if (path.basename(file, path.extname(file)) === slug) {
       return parsePost(file);
     }
   }
@@ -99,5 +101,5 @@ export function getPostsByCategory(categoryName: string): Post[] {
 
 /** 모든 포스트 슬러그 목록 (정적 경로 생성용) */
 export function getAllSlugs(): string[] {
-  return getMdxFiles(POSTS_DIR).map((file) => path.basename(file, ".mdx"));
+  return getMdxFiles(POSTS_DIR).map((file) => path.basename(file, path.extname(file)));
 }

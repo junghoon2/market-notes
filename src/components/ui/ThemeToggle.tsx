@@ -51,15 +51,17 @@ export default function ThemeToggle() {
   }
 
   const icon = theme === "light" ? "☀️" : theme === "dark" ? "🌙" : "💻";
+  const label = theme === "light" ? "밝게" : theme === "dark" ? "어둡게" : "자동";
 
   return (
     <button
       onClick={toggleTheme}
-      className="flex h-9 w-9 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+      className="flex h-9 items-center gap-1.5 rounded-md px-3 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
       aria-label="테마 변경"
-      title={`현재: ${theme === "light" ? "라이트" : theme === "dark" ? "다크" : "시스템"}`}
+      title={`현재: ${label} — 클릭하면 변경`}
     >
-      {icon}
+      <span>{icon}</span>
+      <span>{label}</span>
     </button>
   );
 }
