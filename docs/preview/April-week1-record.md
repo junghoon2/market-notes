@@ -14,8 +14,12 @@ description: "지난주 구글 터보퀀트 쇼크에서 반등. 코스피는 �
 
 트럼프는 이란에 지상군 투입까지 검토한다고 하는데, 시장은 디커플링한다.
 
-왜일까? 트럼프의 말을 신뢰하지 않는다는 것인데, 정확한 원인은 알기 어렵다.
-다만, 트럼프의 말대로 가지 않는다게 사실.
+왜일까? 월가에서는 **TACO(Trump Always Chickens Out)** 라는 말이 나온다. 트럼프가 강경 발언을 해도 결국 물러선다는 패턴이 반복되면서 시장이 학습한 것이다. 트럼프 본인이 주가를 의식한다는 것도 시장은 알고 있다. 어차피 증시가 폭락까지 가지는 않을 거라는 전제가 깔린다.
+
+또 다른 이유는 나스닥의 구조다. 나스닥 상위 종목은 AI·빅테크다. 이들의 주가 동력은 중동 지정학이 아니라 AI 수요와 기업 실적이다. 전쟁이 길어져도 엔비디아 데이터센터 주문이 줄지 않는다. 나스닥은 이란 전쟁과 다른 세계의 이야기를 보고 있다.
+
+실제로 4/2 트럼프 "2~3주 내 이란 강타" 발언 직후 코스피 -4.47%, 나스닥 선물 -1.5% 급락했다. 그런데 주간 마감 기준으로 나스닥은 +4.44%로 마감했다. 당일 공포는 있었지만, 주간으로는 이미 소화됐다.
+
 
 ---
 
@@ -138,3 +142,12 @@ description: "지난주 구글 터보퀀트 쇼크에서 반등. 코스피는 �
 ---
 
 *이 글은 개인 투자 기록이며, 투자 권유가 아닙니다.*
+
+---
+
+## 참고 자료
+
+- [Trump 'pays attention to the stock market': Wall Street eyes signs of TACO amid Iran war — Yahoo Finance](https://finance.yahoo.com/news/trump-pays-attention-to-the-stock-market-wall-street-eyes-signs-of-taco-amid-iran-war-140048438.html)
+- [Why stocks are acting so weird about a spiraling war with Iran — CNN Business](https://www.cnn.com/2026/03/03/investing/us-stocks-iran-turmoil)
+- [증시 타이밍에 맞춘 트럼프의 입‥패턴화되는 '타코 트레이드'? — MBC](https://imnews.imbc.com/replay/2026/nwdesk/article/6809966_37004.html)
+- [트럼프 이란 발표에 증시 롤러코스터…전쟁마저 시장관리용 도구? — 조세일보](https://www.joseilbo.com/news/htmls/2026/03/20260324565225.html)
