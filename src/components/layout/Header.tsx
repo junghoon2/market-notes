@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import ThemeToggle from "@/components/ui/ThemeToggle";
 import SearchDialog from "@/components/ui/SearchDialog";
 import type { Post } from "@/types";
 
@@ -45,7 +44,6 @@ export default function Header({ posts = [] }: { posts?: Post[] }) {
         {/* 우측 도구 영역 */}
         <div className="flex items-center gap-2">
           <SearchDialog posts={posts} />
-          <ThemeToggle />
 
           {/* 모바일 메뉴 버튼 */}
           <button
