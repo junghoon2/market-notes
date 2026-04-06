@@ -3,9 +3,16 @@
 /* 다크모드: class 기반 전환 (ThemeToggle에서 .dark 클래스 제어) */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* 라이트 모드 CSS 변수 */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+/* 다크 모드 CSS 변수 — .dark 클래스로 제어 (미디어쿼리 아님) */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -13,13 +20,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -50,10 +50,8 @@ body {
   border-bottom: 1px solid #e4e4e7;
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose h2 {
-    border-bottom-color: #27272a;
-  }
+.dark .prose h2 {
+  border-bottom-color: #27272a;
 }
 
 .prose h3 {
@@ -74,10 +72,8 @@ body {
   text-underline-offset: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose a {
-    color: #60a5fa;
-  }
+.dark .prose a {
+  color: #60a5fa;
 }
 
 .prose ul,
@@ -109,10 +105,8 @@ body {
   font-style: italic;
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose blockquote {
-    color: #a1a1aa;
-  }
+.dark .prose blockquote {
+  color: #a1a1aa;
 }
 
 .prose pre {
@@ -133,10 +127,8 @@ body {
   font-size: 0.875em;
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose :not(pre) > code {
-    background: #27272a;
-  }
+.dark .prose :not(pre) > code {
+  background: #27272a;
 }
 
 .prose table {
@@ -154,11 +146,9 @@ body {
   text-align: left;
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose th,
-  .prose td {
-    border-color: #3f3f46;
-  }
+.dark .prose th,
+.dark .prose td {
+  border-color: #3f3f46;
 }
 
 .prose th {
@@ -166,10 +156,8 @@ body {
   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose th {
-    background: #27272a;
-  }
+.dark .prose th {
+  background: #27272a;
 }
 
 .prose img {
@@ -187,10 +175,8 @@ body {
   border-color: #e4e4e7;
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose hr {
-    border-color: #27272a;
-  }
+.dark .prose hr {
+  border-color: #27272a;
 }
 
 .prose strong {
