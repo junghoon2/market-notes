@@ -39,7 +39,7 @@ export default function RootLayout({
   }));
 
   return (
-    <html lang="ko" className="dark">
+    <html lang="ko">
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white font-sans text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-50`}
       >
