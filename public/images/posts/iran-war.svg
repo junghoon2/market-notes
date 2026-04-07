@@ -1,69 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a0a0a"/>
-      <stop offset="50%" style="stop-color:#7f1d1d"/>
-      <stop offset="100%" style="stop-color:#c2410c"/>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0015"/>
+      <stop offset="40%" style="stop-color:#1a0a3e"/>
+      <stop offset="100%" style="stop-color:#0d1b4b"/>
     </linearGradient>
-    <linearGradient id="line1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#fca5a5;stop-opacity:0.8"/>
-      <stop offset="100%" style="stop-color:#fca5a5;stop-opacity:0"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    <radialGradient id="aurora1" cx="30%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="aurora2" cx="70%" cy="30%" r="55%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="aurora3" cx="50%" cy="60%" r="45%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="20"/>
     </filter>
   </defs>
 
   <!-- 배경 -->
-  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#sky)"/>
 
-  <!-- 노이즈 레이어 - 대각선 줄 -->
-  <g opacity="0.08">
-    <line x1="-100" y1="0" x2="900" y2="0" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="30" x2="900" y2="30" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="60" x2="900" y2="60" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="90" x2="900" y2="90" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="120" x2="900" y2="120" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="150" x2="900" y2="150" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="180" x2="900" y2="180" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="210" x2="900" y2="210" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="240" x2="900" y2="240" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="270" x2="900" y2="270" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="300" x2="900" y2="300" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="330" x2="900" y2="330" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="360" x2="900" y2="360" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="390" x2="900" y2="390" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="420" x2="900" y2="420" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="450" x2="900" y2="450" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="480" x2="900" y2="480" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="510" x2="900" y2="510" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="540" x2="900" y2="540" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="570" x2="900" y2="570" stroke="#fff" stroke-width="1"/>
-    <line x1="-100" y1="600" x2="900" y2="600" stroke="#fff" stroke-width="1"/>
+  <!-- 오로라 레이어 -->
+  <ellipse cx="240" cy="240" rx="380" ry="180" fill="url(#aurora1)" filter="url(#blur1)"/>
+  <ellipse cx="560" cy="180" rx="360" ry="200" fill="url(#aurora2)" filter="url(#blur1)"/>
+  <ellipse cx="400" cy="360" rx="340" ry="160" fill="url(#aurora3)" filter="url(#blur1)"/>
+
+  <!-- 오로라 흐름 곡선 -->
+  <g opacity="0.3" fill="none">
+    <path d="M0,200 Q200,100 400,180 Q600,260 800,150" stroke="#a78bfa" stroke-width="60" opacity="0.15" filter="url(#blur1)"/>
+    <path d="M0,280 Q200,160 400,240 Q600,320 800,220" stroke="#67e8f9" stroke-width="40" opacity="0.15" filter="url(#blur1)"/>
+    <path d="M0,320 Q300,220 500,300 Q650,360 800,280" stroke="#6ee7b7" stroke-width="30" opacity="0.1" filter="url(#blur1)"/>
   </g>
 
-  <!-- 급락 차트 라인 -->
-  <polyline
-    points="60,100 130,110 200,120 260,115 310,130 360,200 400,320 430,380 450,420 470,400 500,380 540,360 580,340 620,320 670,300 730,280 800,270"
-    fill="none" stroke="#fca5a5" stroke-width="2.5" opacity="0.9" filter="url(#glow)"
-  />
+  <!-- 별 -->
+  <g fill="white">
+    <circle cx="50" cy="30" r="1.2" opacity="0.9"/>
+    <circle cx="120" cy="55" r="0.8" opacity="0.7"/>
+    <circle cx="200" cy="20" r="1.5" opacity="0.8"/>
+    <circle cx="310" cy="45" r="0.9" opacity="0.6"/>
+    <circle cx="380" cy="15" r="1.3" opacity="0.9"/>
+    <circle cx="450" cy="60" r="0.7" opacity="0.5"/>
+    <circle cx="530" cy="25" r="1.1" opacity="0.8"/>
+    <circle cx="610" cy="50" r="0.8" opacity="0.7"/>
+    <circle cx="700" cy="18" r="1.4" opacity="0.9"/>
+    <circle cx="760" cy="65" r="0.9" opacity="0.6"/>
+    <circle cx="85" cy="100" r="0.7" opacity="0.5"/>
+    <circle cx="165" cy="80" r="1.2" opacity="0.8"/>
+    <circle cx="270" cy="95" r="0.8" opacity="0.6"/>
+    <circle cx="420" cy="88" r="1.0" opacity="0.7"/>
+    <circle cx="580" cy="75" r="0.9" opacity="0.8"/>
+    <circle cx="680" cy="105" r="0.7" opacity="0.5"/>
+    <circle cx="740" cy="90" r="1.1" opacity="0.7"/>
+    <circle cx="30" cy="150" r="0.8" opacity="0.6"/>
+    <circle cx="490" cy="130" r="1.2" opacity="0.8"/>
+    <circle cx="650" cy="140" r="0.7" opacity="0.5"/>
+  </g>
 
-  <!-- 보조 차트 라인 -->
-  <polyline
-    points="60,160 130,165 200,170 260,168 310,180 360,240 400,340 430,390 450,430 470,415 500,400 540,385 580,370 620,355 670,340 730,325 800,315"
-    fill="none" stroke="#fca5a5" stroke-width="1" opacity="0.3"
-  />
+  <!-- 산 실루엣 -->
+  <polygon points="0,600 0,420 80,360 160,400 240,320 320,380 380,300 440,360 520,280 600,350 660,310 720,360 800,300 800,600" fill="#0a0015" opacity="0.85"/>
+  <polygon points="0,600 0,470 100,430 180,460 260,400 340,440 420,380 480,420 560,370 640,410 720,380 800,420 800,600" fill="#0d0020" opacity="0.9"/>
 
-  <!-- 하락 강조 수직선 -->
-  <line x1="450" y1="80" x2="450" y2="520" stroke="#ef4444" stroke-width="1" opacity="0.4" stroke-dasharray="4,4"/>
-
-  <!-- -35% 텍스트 -->
-  <text x="460" y="200" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="#ef4444" opacity="0.25">-35%</text>
-
-  <!-- 회복 화살표 영역 -->
-  <rect x="470" y="280" width="310" height="3" fill="#fca5a5" opacity="0.4"/>
-
-  <!-- 하단 장식선 -->
-  <line x1="0" y1="570" x2="800" y2="570" stroke="#fca5a5" stroke-width="0.5" opacity="0.3"/>
+  <!-- 산 위 반사광 -->
+  <path d="M380,300 Q400,290 420,300" stroke="#a78bfa" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M520,280 Q540,270 560,280" stroke="#67e8f9" stroke-width="2" fill="none" opacity="0.4"/>
 </svg>
