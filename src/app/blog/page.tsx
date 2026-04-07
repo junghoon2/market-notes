@@ -7,18 +7,22 @@ export const metadata: Metadata = {
   description: "모든 주식 투자 분석 글 목록",
 };
 
-/** 블로그 목록 페이지 - 모든 글을 날짜순으로 표시 */
+/** 블로그 목록 페이지 — 전체 글을 에디토리얼 그리드로 표시 */
 export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight">블로그</h1>
-        <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-          총 {posts.length}개의 글
-        </p>
+    <div className="space-y-6">
+      {/* 섹션 레이블 */}
+      <div className="flex items-baseline justify-between border-b border-zinc-900 pb-3">
+        <span className="text-[11px] font-medium uppercase tracking-widest text-zinc-900">
+          / 전체 글
+        </span>
+        <span className="text-[11px] uppercase tracking-widest text-zinc-400">
+          {posts.length}개의 글
+        </span>
       </div>
+
       <PostList posts={posts} />
     </div>
   );

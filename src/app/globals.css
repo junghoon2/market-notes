@@ -1,18 +1,9 @@
 @import "tailwindcss";
 
-/* 다크모드: class 기반 전환 (ThemeToggle에서 .dark 클래스 제어) */
-@custom-variant dark (&:where(.dark, .dark *));
-
-/* 라이트 모드 CSS 변수 */
+/* CSS 변수 */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-/* 다크 모드 CSS 변수 — .dark 클래스로 제어 (미디어쿼리 아님) */
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
 }
 
 @theme inline {

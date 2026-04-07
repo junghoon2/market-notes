@@ -2,49 +2,61 @@ import Link from "next/link";
 import { formatDate } from "@/lib/utils";
 import type { Post } from "@/types";
 
-/** 블로그 글 카드 컴포넌트 - 목록에서 개별 포스트를 표시 */
-export default function PostCard({ post }: { post: Post }) {
+/** 카테고리별 그라디언트 색상 매핑 */
+const CATEGORY_GRADIENTS: Record<string, string> = {
+  주간리포트: "from-blue-400 to-blue-700",
+  매매일지: "from-emerald-400 to-emerald-700",
+  포트폴리오: "from-violet-400 to-violet-700",
+  기업분석: "from-orange-400 to-orange-700",
+  시장분석: "from-rose-400 to-rose-700",
+  투자철학: "from-amber-400 to-amber-700",
+};
+
+function getCategoryGradient(category: string): string {
+  return CATEGORY_GRADIENTS[category] ?? "from-zinc-400 to-zinc-700";
+}
+
+/** 에디토리얼 포스트 카드 — 이미지/그라디언트 우선, 하단 제목만 */
+export default function PostCard({
+  post,
+  large = false,
+}: {
+  post: Post;
+  large?: boolean;
+}) {
+  const gradient = getCategoryGradient(post.frontmatter.category);
+
   return (
     <article className="group">
       <Link href={`/blog/${post.slug}`} className="block">
-        <div className="rounded-lg border border-zinc-200 p-6 transition-all hover:border-zinc-400 hover:shadow-sm dark:border-zinc-800 dark:hover:border-zinc-600">
-          {/* 카테고리 뱃지 */}
-          <span className="inline-block rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 dark:bg-blue-950 dark:text-blue-300">
-            {post.frontmatter.category}
-          </span>
-
-          {/* 제목 */}
-          <h2 className="mt-3 text-xl font-semibold text-zinc-900 group-hover:text-blue-600 dark:text-zinc-50 dark:group-hover:text-blue-400">
-            {post.frontmatter.title}
-          </h2>
-
-          {/* 설명 */}
-          <p className="mt-2 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">
-            {post.frontmatter.description}
-          </p>
-
-          {/* 메타 정보 */}
-          <div className="mt-4 flex items-center gap-4 text-xs text-zinc-500 dark:text-zinc-500">
-            <time dateTime={post.frontmatter.date}>
-              {formatDate(post.frontmatter.date)}
-            </time>
-            <span>·</span>
-            <span>{post.readingTime}</span>
-          </div>
-
-          {/* 태그 목록 */}
-          {post.frontmatter.tags.length > 0 && (
-            <div className="mt-3 flex flex-wrap gap-2">
-              {post.frontmatter.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded bg-zinc-100 px-2 py-0.5 text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
-                >
-                  #{tag}
-                </span>
-              ))}
+        {/* 이미지 / 그라디언트 영역 */}
+        <div
+          className={`w-full overflow-hidden bg-gradient-to-br ${gradient} ${large ? "aspect-[3/4]" : "aspect-[4/3]"}`}
+        >
+          {post.frontmatter.thumbnail ? (
+            <img
+              src={post.frontmatter.thumbnail}
+              alt={post.frontmatter.title}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            /* thumbnail 없을 때 카테고리 레이블만 표시 */
+            <div className="flex h-full w-full items-end p-4">
+              <span className="text-[10px] font-medium uppercase tracking-widest text-white/60">
+                {post.frontmatter.category}
+              </span>
             </div>
           )}
+        </div>
+
+        {/* 텍스트 영역 */}
+        <div className="mt-3 space-y-1">
+          <p className="text-[10px] font-medium uppercase tracking-widest text-zinc-400">
+            {formatDate(post.frontmatter.date)}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readingTime}
+          </p>
+          <h2 className="text-sm font-semibold uppercase leading-snug tracking-wide text-zinc-900 transition-colors group-hover:text-zinc-500">
+            {post.frontmatter.title}
+          </h2>
         </div>
       </Link>
     </article>

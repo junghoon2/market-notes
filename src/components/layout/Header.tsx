@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import SearchDialog from "@/components/ui/SearchDialog";
-import ThemeToggle from "@/components/ui/ThemeToggle";
 import type { Post } from "@/types";
 
 /** 네비게이션 링크 목록 */
@@ -13,66 +12,65 @@ const NAV_LINKS = [
   { href: "/about", label: "소개" },
 ];
 
-/** 사이트 상단 헤더 컴포넌트 */
+/** 에디토리얼 스타일 헤더 — 중앙 대형 로고 + 우측 세로 네비 */
 export default function Header({ posts = [] }: { posts?: Post[] }) {
-  // 모바일 메뉴 열림/닫힘 상태
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/80">
-      <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-6">
-        {/* 로고 */}
-        <Link
-          href="/"
-          className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50"
-        >
-          📈 나의 투자일지
-        </Link>
-
-        {/* 데스크톱 네비게이션 */}
-        <nav className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* 우측 도구 영역 */}
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <SearchDialog posts={posts} />
-
-          {/* 모바일 메뉴 버튼 */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-md text-zinc-600 hover:bg-zinc-100 md:hidden dark:text-zinc-400 dark:hover:bg-zinc-800"
-            aria-label="메뉴 열기"
+    <header className="relative px-8 pb-0 pt-8">
+      {/* 우측 상단 세로 네비게이션 (데스크탑) */}
+      <div className="absolute right-8 top-8 hidden flex-col items-end gap-1.5 md:flex">
+        {NAV_LINKS.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="text-[11px] font-medium uppercase tracking-widest text-zinc-500 transition-colors hover:text-zinc-900"
           >
-            {isOpen ? "✕" : "☰"}
-          </button>
+            {link.label}
+          </Link>
+        ))}
+        <div className="mt-3">
+          <SearchDialog posts={posts} />
         </div>
       </div>
 
+      {/* 중앙 대형 로고 */}
+      <div className="text-center">
+        <Link href="/" className="inline-block">
+          <span className="block text-5xl font-black leading-none tracking-tight text-zinc-900 sm:text-7xl md:text-8xl lg:text-9xl">
+            나의 투자 일지
+          </span>
+        </Link>
+      </div>
+
       {/* 모바일 네비게이션 */}
+      <div className="mt-4 flex items-center justify-between md:hidden">
+        <SearchDialog posts={posts} />
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-[11px] font-medium uppercase tracking-widest text-zinc-600"
+          aria-label="메뉴 열기"
+        >
+          {isOpen ? "닫기" : "메뉴"}
+        </button>
+      </div>
       {isOpen && (
-        <nav className="border-t border-zinc-200 px-6 py-4 md:hidden dark:border-zinc-800">
+        <nav className="mt-2 flex flex-col gap-3 border-t border-zinc-200 pt-3 md:hidden">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block py-2 text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+              className="text-[11px] uppercase tracking-widest text-zinc-600 hover:text-zinc-900"
             >
               {link.label}
             </Link>
           ))}
         </nav>
       )}
+
+      {/* 하단 구분선 */}
+      <div className="mt-6 border-t border-zinc-900" />
     </header>
   );
 }
