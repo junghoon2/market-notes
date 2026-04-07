@@ -4,6 +4,7 @@ date: "2026-03-29"
 category: "주간리포트"
 tags: ["23W", "3월4주", "반도체조정", "추가매수"]
 description: "반도체 3종목 일제 하락. 삼성전자·현대차 추가 매수로 대응. 주간 성과와 KPT 회고."
+thumbnail: "/images/posts/march-week4.svg"
 ---
 
 ## 이번 주 한 줄 요약

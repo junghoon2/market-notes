@@ -4,6 +4,7 @@ date: "2026-03-22"
 category: "주간리포트"
 tags: ["22W", "3월4주", "이란전쟁", "반도체", "KPT"]
 description: "이란 전쟁 급락에서 3주 만에 완전 회복. 5개월 누적 수익율 53.5%. 주간 성과와 KPT 회고."
+thumbnail: "/images/posts/march-week3.svg"
 ---
 
 ## 이번 주 한 줄 요약

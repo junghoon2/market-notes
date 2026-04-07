@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#431407"/>
+      <stop offset="40%" style="stop-color:#92400e"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="areafill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="75%" cy="25%" r="40%">
+      <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#fde68a;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- 글로우 효과 -->
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <!-- 수평 그리드 -->
+  <g opacity="0.08" stroke="#fde68a" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+  </g>
+
+  <!-- 나스닥 상승 곡선 (메인) -->
+  <polygon
+    points="60,480 120,460 180,420 240,370 300,310 360,250 420,190 480,145 540,120 600,105 660,95 720,88 780,82 800,80 800,600 60,600"
+    fill="url(#areafill)"
+  />
+
+  <polyline
+    points="60,480 120,460 180,420 240,370 300,310 360,250 420,190 480,145 540,120 600,105 660,95 720,88 780,82 800,80"
+    fill="none" stroke="#fbbf24" stroke-width="3"
+  />
+
+  <!-- 전주 쇼크 딥 -->
+  <polyline
+    points="60,300 100,310 140,330 180,380 210,440 240,460 270,430 300,400 340,370 380,330 420,300 460,260 500,230 540,210"
+    fill="none" stroke="#fcd34d" stroke-width="1.5" opacity="0.4" stroke-dasharray="6,3"
+  />
+
+  <!-- NASDAQ 레이블 -->
+  <text x="50" y="90" font-family="Arial, sans-serif" font-size="90" font-weight="900" fill="#f59e0b" opacity="0.15">NASDAQ</text>
+
+  <!-- 상승 포인트 마커 -->
+  <circle cx="660" cy="95" r="5" fill="#fbbf24"/>
+  <circle cx="420" cy="190" r="4" fill="#fbbf24" opacity="0.7"/>
+
+  <!-- 미장 텍스트 -->
+  <text x="500" y="380" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#fde68a" opacity="0.6" letter-spacing="3">미장 강세</text>
+
+  <!-- 하단 강조선 -->
+  <rect x="0" y="596" width="800" height="4" fill="#fbbf24" opacity="0.4"/>
+
+  <!-- 샌디스크 레이블 -->
+  <text x="620" y="60" font-family="Arial, sans-serif" font-size="11" fill="#fde68a" opacity="0.7" letter-spacing="2">SANDISK</text>
+  <line x1="618" y1="65" x2="618" y2="95" stroke="#fde68a" stroke-width="1" opacity="0.5"/>
+</svg>
