@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1d4d"/>
+      <stop offset="35%" style="stop-color:#1e40af"/>
+      <stop offset="70%" style="stop-color:#60a5fa"/>
+      <stop offset="92%" style="stop-color:#fde68a"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+    <radialGradient id="sunHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fffbeb;stop-opacity:0.9"/>
+      <stop offset="40%" style="stop-color:#fcd34d;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="sunCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="55%" style="stop-color:#fef3c7;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0.75"/>
+    </radialGradient>
+    <radialGradient id="peakGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="60%" style="stop-color:#fef3c7;stop-opacity:0.85"/>
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0.4"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.35"/>
+      <stop offset="50%" style="stop-color:#1e40af;stop-opacity:0.45"/>
+      <stop offset="100%" style="stop-color:#0c1d4d;stop-opacity:0.7"/>
+    </linearGradient>
+    <linearGradient id="mountainFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a"/>
+      <stop offset="100%" style="stop-color:#0c1d4d"/>
+    </linearGradient>
+    <linearGradient id="mountainBack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1e3a8a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="starblur">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <!-- 하늘 배경 -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+
+  <!-- 태양 후광 -->
+  <ellipse cx="400" cy="210" rx="280" ry="180" fill="url(#sunHalo)" filter="url(#glow)"/>
+
+  <!-- 상단 잔별 (새벽→아침 전환 잔상) -->
+  <g fill="white">
+    <circle cx="60" cy="28" r="0.9" opacity="0.65"/>
+    <circle cx="135" cy="48" r="0.7" opacity="0.5"/>
+    <circle cx="215" cy="22" r="1.0" opacity="0.7"/>
+    <circle cx="290" cy="55" r="0.8" opacity="0.55"/>
+    <circle cx="515" cy="42" r="0.9" opacity="0.6"/>
+    <circle cx="595" cy="18" r="1.1" opacity="0.7"/>
+    <circle cx="678" cy="48" r="0.8" opacity="0.55"/>
+    <circle cx="748" cy="28" r="0.9" opacity="0.6"/>
+  </g>
+
+  <!-- 상승 파도 (2주 연속 두 자릿수를 상징하는 두 번의 돌파 곡선) -->
+  <g stroke="#fef3c7" stroke-width="1.6" opacity="0.38" fill="none" stroke-dasharray="6 5">
+    <path d="M80,520 Q200,460 300,420 T540,320 T780,180"/>
+  </g>
+  <g stroke="#fbbf24" stroke-width="1.2" opacity="0.55" fill="none">
+    <path d="M80,520 Q200,460 300,420 T540,320 T780,180"/>
+  </g>
+
+  <!-- 상승 곡선 정점의 작은 화살표 포인트 -->
+  <g fill="#fde68a" opacity="0.75">
+    <circle cx="300" cy="420" r="3"/>
+    <circle cx="540" cy="320" r="3"/>
+    <circle cx="780" cy="180" r="4"/>
+  </g>
+
+  <!-- 태양 (중심 상단, 이정표) -->
+  <ellipse cx="400" cy="210" rx="58" ry="58" fill="url(#sunCore)"/>
+  <ellipse cx="400" cy="210" rx="85" ry="85" fill="#fbbf24" opacity="0.25" filter="url(#softglow)"/>
+
+  <!-- 태양 광선 -->
+  <g stroke="#fef3c7" stroke-width="1" opacity="0.22">
+    <line x1="400" y1="210" x2="150" y2="100"/>
+    <line x1="400" y1="210" x2="250" y2="70"/>
+    <line x1="400" y1="210" x2="400" y2="50"/>
+    <line x1="400" y1="210" x2="550" y2="70"/>
+    <line x1="400" y1="210" x2="650" y2="100"/>
+  </g>
+
+  <!-- 부드러운 구름 띠 (아침 분위기) -->
+  <g>
+    <ellipse cx="180" cy="260" rx="140" ry="14" fill="#fef3c7" opacity="0.3" filter="url(#softglow)"/>
+    <ellipse cx="620" cy="250" rx="150" ry="12" fill="#fef3c7" opacity="0.25" filter="url(#softglow)"/>
+    <ellipse cx="400" cy="320" rx="200" ry="10" fill="#fcd34d" opacity="0.2" filter="url(#softglow)"/>
+  </g>
+
+  <!-- 원경 산 (부드러운 파형) -->
+  <polygon points="0,440 90,385 180,410 270,370 360,400 450,365 540,395 630,350 720,380 800,360 800,500 0,500" fill="url(#mountainBack)" opacity="0.78"/>
+
+  <!-- 전경: 쌍봉 (2주 연속 두 자릿수 돌파 상징) -->
+  <polygon points="0,520 80,470 170,500 250,395 340,470 400,420 460,470 550,395 630,500 720,460 800,490 800,600 0,600" fill="url(#mountainFront)"/>
+
+  <!-- 쌍봉 설산 하이라이트 -->
+  <polygon points="250,395 268,370 286,395" fill="#fef3c7" opacity="0.35"/>
+  <polygon points="550,395 568,368 586,395" fill="#fef3c7" opacity="0.35"/>
+
+  <!-- 두번째 쌍봉 위 1억 돌파 이정표 빛점 -->
+  <circle cx="400" cy="388" r="5" fill="url(#peakGlow)"/>
+  <circle cx="400" cy="388" r="16" fill="#fbbf24" opacity="0.45" filter="url(#softglow)"/>
+  <g stroke="#fef3c7" stroke-width="0.7" opacity="0.7">
+    <line x1="400" y1="378" x2="400" y2="398"/>
+    <line x1="390" y1="388" x2="410" y2="388"/>
+    <line x1="392" y1="380" x2="408" y2="396"/>
+    <line x1="392" y1="396" x2="408" y2="380"/>
+  </g>
+
+  <!-- 수면 반사 -->
+  <rect x="0" y="500" width="800" height="100" fill="url(#water)"/>
+  <ellipse cx="400" cy="530" rx="220" ry="12" fill="#fde68a" opacity="0.25"/>
+  <ellipse cx="400" cy="552" rx="150" ry="7" fill="#fef3c7" opacity="0.18"/>
+  <ellipse cx="400" cy="572" rx="90" ry="4" fill="#fbbf24" opacity="0.12"/>
+
+  <!-- 전경 나무 실루엣 -->
+  <g fill="#0c1d4d">
+    <polygon points="22,600 36,522 50,600"/>
+    <polygon points="52,600 68,512 84,600"/>
+    <polygon points="708,600 725,518 742,600"/>
+    <polygon points="742,600 760,506 778,600"/>
+    <polygon points="772,600 788,524 804,600"/>
+  </g>
+</svg>
