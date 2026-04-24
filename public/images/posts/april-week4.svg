@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b1220"/>
+      <stop offset="40%" style="stop-color:#1e293b"/>
+      <stop offset="75%" style="stop-color:#0f766e"/>
+      <stop offset="100%" style="stop-color:#115e59"/>
+    </linearGradient>
+    <radialGradient id="nebula1" cx="28%" cy="35%" r="35%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:0.28"/>
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="nebula2" cx="70%" cy="28%" r="32%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.22"/>
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="nebula3" cx="50%" cy="60%" r="40%">
+      <stop offset="0%" style="stop-color:#f472b6;stop-opacity:0.16"/>
+      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="coreStar" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#fef3c7;stop-opacity:0.85"/>
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0.5"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e;stop-opacity:0.55"/>
+      <stop offset="100%" style="stop-color:#0b1220;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="mountain1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#020617"/>
+    </linearGradient>
+    <linearGradient id="mountain2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="starblur">
+      <feGaussianBlur stdDeviation="1.4"/>
+    </filter>
+    <filter id="softblur">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- 성운 (신규 3종목을 상징하는 3개의 색채 구름) -->
+  <ellipse cx="220" cy="210" rx="260" ry="150" fill="url(#nebula1)" filter="url(#softblur)"/>
+  <ellipse cx="560" cy="170" rx="240" ry="140" fill="url(#nebula2)" filter="url(#softblur)"/>
+  <ellipse cx="400" cy="360" rx="320" ry="140" fill="url(#nebula3)" filter="url(#softblur)"/>
+
+  <!-- 작은 별들 (전역 배경) -->
+  <g fill="white">
+    <circle cx="38" cy="32" r="0.8" opacity="0.6"/>
+    <circle cx="95" cy="18" r="1.0" opacity="0.75"/>
+    <circle cx="152" cy="58" r="0.7" opacity="0.5"/>
+    <circle cx="208" cy="24" r="0.9" opacity="0.65"/>
+    <circle cx="265" cy="72" r="1.1" opacity="0.8"/>
+    <circle cx="322" cy="35" r="0.8" opacity="0.6"/>
+    <circle cx="378" cy="62" r="0.7" opacity="0.55"/>
+    <circle cx="435" cy="20" r="1.0" opacity="0.7"/>
+    <circle cx="492" cy="48" r="0.9" opacity="0.65"/>
+    <circle cx="548" cy="82" r="0.8" opacity="0.6"/>
+    <circle cx="605" cy="28" r="1.1" opacity="0.75"/>
+    <circle cx="662" cy="58" r="0.7" opacity="0.55"/>
+    <circle cx="718" cy="22" r="1.0" opacity="0.7"/>
+    <circle cx="770" cy="65" r="0.8" opacity="0.6"/>
+    <circle cx="62" cy="112" r="0.9" opacity="0.65"/>
+    <circle cx="128" cy="138" r="0.7" opacity="0.5"/>
+    <circle cx="188" cy="105" r="1.0" opacity="0.75"/>
+    <circle cx="248" cy="148" r="0.8" opacity="0.6"/>
+    <circle cx="305" cy="118" r="0.9" opacity="0.65"/>
+    <circle cx="368" cy="155" r="0.7" opacity="0.55"/>
+    <circle cx="428" cy="108" r="1.0" opacity="0.7"/>
+    <circle cx="488" cy="142" r="0.8" opacity="0.6"/>
+    <circle cx="548" cy="120" r="0.9" opacity="0.65"/>
+    <circle cx="608" cy="152" r="0.7" opacity="0.5"/>
+    <circle cx="668" cy="112" r="1.0" opacity="0.75"/>
+    <circle cx="728" cy="148" r="0.8" opacity="0.6"/>
+    <circle cx="780" cy="118" r="0.9" opacity="0.65"/>
+    <circle cx="35" cy="210" r="0.8" opacity="0.6"/>
+    <circle cx="112" cy="238" r="0.7" opacity="0.5"/>
+    <circle cx="178" cy="205" r="1.0" opacity="0.75"/>
+    <circle cx="452" cy="228" r="0.7" opacity="0.5"/>
+    <circle cx="512" cy="198" r="0.9" opacity="0.65"/>
+    <circle cx="582" cy="232" r="0.8" opacity="0.6"/>
+    <circle cx="642" cy="205" r="1.0" opacity="0.7"/>
+    <circle cx="702" cy="238" r="0.7" opacity="0.55"/>
+    <circle cx="758" cy="210" r="0.9" opacity="0.65"/>
+    <circle cx="48" cy="302" r="0.8" opacity="0.6"/>
+    <circle cx="128" cy="328" r="0.9" opacity="0.65"/>
+    <circle cx="698" cy="305" r="0.8" opacity="0.6"/>
+    <circle cx="762" cy="335" r="0.7" opacity="0.5"/>
+  </g>
+
+  <!-- 별자리 1 — 한화에어로 (좌상단) -->
+  <g stroke="#60a5fa" stroke-width="0.6" opacity="0.45" fill="none">
+    <line x1="140" y1="180" x2="188" y2="145"/>
+    <line x1="188" y1="145" x2="245" y2="172"/>
+    <line x1="245" y1="172" x2="220" y2="225"/>
+    <line x1="220" y1="225" x2="140" y2="180"/>
+  </g>
+  <g fill="white" filter="url(#starblur)">
+    <circle cx="140" cy="180" r="2.4" opacity="0.95"/>
+    <circle cx="188" cy="145" r="2.8" opacity="0.95"/>
+    <circle cx="245" cy="172" r="2.2" opacity="0.9"/>
+    <circle cx="220" cy="225" r="2.0" opacity="0.85"/>
+  </g>
+  <g stroke="white" stroke-width="0.7" opacity="0.6">
+    <line x1="188" y1="136" x2="188" y2="154"/>
+    <line x1="179" y1="145" x2="197" y2="145"/>
+  </g>
+
+  <!-- 별자리 2 — 아마존 (우상단) -->
+  <g stroke="#c084fc" stroke-width="0.6" opacity="0.45" fill="none">
+    <line x1="530" y1="155" x2="592" y2="130"/>
+    <line x1="592" y1="130" x2="648" y2="168"/>
+    <line x1="648" y1="168" x2="605" y2="212"/>
+    <line x1="605" y1="212" x2="530" y2="155"/>
+  </g>
+  <g fill="white" filter="url(#starblur)">
+    <circle cx="530" cy="155" r="2.2" opacity="0.9"/>
+    <circle cx="592" cy="130" r="2.6" opacity="0.95"/>
+    <circle cx="648" cy="168" r="2.3" opacity="0.9"/>
+    <circle cx="605" cy="212" r="2.0" opacity="0.85"/>
+  </g>
+  <g stroke="white" stroke-width="0.7" opacity="0.6">
+    <line x1="592" y1="121" x2="592" y2="139"/>
+    <line x1="583" y1="130" x2="601" y2="130"/>
+  </g>
+
+  <!-- 별자리 3 — 마벨 (하단 중앙) -->
+  <g stroke="#f472b6" stroke-width="0.6" opacity="0.45" fill="none">
+    <line x1="320" y1="340" x2="380" y2="315"/>
+    <line x1="380" y1="315" x2="438" y2="345"/>
+    <line x1="438" y1="345" x2="395" y2="388"/>
+    <line x1="395" y1="388" x2="320" y2="340"/>
+  </g>
+  <g fill="white" filter="url(#starblur)">
+    <circle cx="320" cy="340" r="2.2" opacity="0.9"/>
+    <circle cx="380" cy="315" r="2.8" opacity="0.95"/>
+    <circle cx="438" cy="345" r="2.4" opacity="0.9"/>
+    <circle cx="395" cy="388" r="2.0" opacity="0.85"/>
+  </g>
+  <g stroke="white" stroke-width="0.7" opacity="0.6">
+    <line x1="380" y1="306" x2="380" y2="324"/>
+    <line x1="371" y1="315" x2="389" y2="315"/>
+  </g>
+
+  <!-- 성장 상승 라인 (누적 수익율 79% 상징) -->
+  <g stroke="#fbbf24" stroke-width="1.2" opacity="0.3" fill="none" stroke-dasharray="4 4">
+    <path d="M70,470 Q250,420 420,340 T760,120"/>
+  </g>
+
+  <!-- 중앙 큰 별 (상단, 이정표) -->
+  <circle cx="400" cy="100" r="22" fill="url(#coreStar)"/>
+  <circle cx="400" cy="100" r="50" fill="#fbbf24" opacity="0.2" filter="url(#softglow)"/>
+  <g stroke="#fef3c7" stroke-width="0.8" opacity="0.35">
+    <line x1="400" y1="70" x2="400" y2="130"/>
+    <line x1="370" y1="100" x2="430" y2="100"/>
+    <line x1="378" y1="78" x2="422" y2="122"/>
+    <line x1="378" y1="122" x2="422" y2="78"/>
+  </g>
+
+  <!-- 원경 산 -->
+  <polygon points="0,460 70,410 140,440 220,395 310,425 400,380 490,415 570,375 650,405 730,370 800,395 800,500 0,500" fill="url(#mountain2)" opacity="0.75"/>
+
+  <!-- 전경 산 -->
+  <polygon points="0,510 55,460 130,490 210,430 295,470 380,420 465,455 545,415 630,445 710,405 800,430 800,600 0,600" fill="url(#mountain1)"/>
+
+  <!-- 수면 반사 -->
+  <rect x="0" y="510" width="800" height="90" fill="url(#water)"/>
+  <ellipse cx="400" cy="540" rx="200" ry="10" fill="#fbbf24" opacity="0.12"/>
+  <ellipse cx="400" cy="560" rx="130" ry="6" fill="#fef3c7" opacity="0.08"/>
+
+  <!-- 전경 나무 실루엣 -->
+  <g fill="#020617">
+    <polygon points="18,600 32,525 46,600"/>
+    <polygon points="46,600 62,515 78,600"/>
+    <polygon points="708,600 724,520 740,600"/>
+    <polygon points="742,600 760,510 778,600"/>
+    <polygon points="774,600 788,528 802,600"/>
+  </g>
+</svg>
