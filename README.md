@@ -54,6 +54,34 @@ MDX 컴포넌트를 본문에서 사용할 수 있음:
 <StockInfo symbol="000660.KS" />
 ```
 
+#### 2-1. Claude로 초안 작성 (현재 방식)
+
+매주 토요일 기준으로 시트의 최신 주차 데이터를 Claude Code에 넘겨 초안을 자동 생성한다. `weekly-stock-blog` 스킬이 이 흐름을 자동화한다.
+
+**트리거 문구**
+
+> "이번주 블로그 글 작성해줘" / "주간 리포트 작성" / "주간 투자 기록 작성"
+
+**스킬이 수행하는 단계**
+
+1. `scripts/fetch-google-sheet.mjs` 실행 → 주간현황·세부종목·매매일지·PER 등 워크시트 JSON 수집
+2. 최신 주차(직전 토요일 기준) 데이터를 추출해 변동·수익률·매매 이유를 정리
+3. 같은 카테고리(`주간리포트`)의 기존 포스트를 참고해 톤·구조 일치
+4. **`docs/preview/` 에 초안 `.md` 저장** (검토 전 본 디렉토리 직접 수정 금지)
+5. 종목 차트가 필요한 구간은 `<StockChart symbol="..." period="..." />` 자동 삽입
+6. (선택) 썸네일 SVG 생성 단계 수행
+
+**검토 후 발행**
+
+```bash
+# 1) docs/preview/ 의 초안을 확인·수정
+# 2) 확정되면 content/posts/YYYY/ 로 이동
+mv docs/preview/<파일>.md content/posts/2026/<파일>.md
+# 3) pnpm dev 로 미리보기 → git commit & push
+```
+
+> 초안은 항상 `docs/preview/` 에 먼저 저장하고, 사람이 확인한 뒤 `content/posts/` 로 옮기는 규칙을 지킨다. Claude가 직접 `content/posts/` 에 쓰지 않는다.
+
 ### 3. 로컬 확인 후 배포
 
 ```bash
