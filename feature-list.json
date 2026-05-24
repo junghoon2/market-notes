@@ -1,0 +1,30 @@
+[
+  {
+    "id": "lint-react-hooks-set-state",
+    "title": "React hooks lint 오류 수정",
+    "description": "TOC, StockChart, SearchDialog, ThemeToggle에서 발생하는 React hooks lint 오류를 수정한다.",
+    "priority": 1,
+    "passes": false
+  },
+  {
+    "id": "next-image-or-lint-warning",
+    "title": "Next Image 전환 또는 lint 경고 처리",
+    "description": "PostCard의 img 사용을 next/image로 전환하거나 의도된 예외로 관리한다.",
+    "priority": 2,
+    "passes": false
+  },
+  {
+    "id": "giscus-cleanup-ref-warning",
+    "title": "Giscus cleanup ref 경고 처리",
+    "description": "GiscusComments의 effect cleanup에서 ref.current 변경 가능성 경고를 제거한다.",
+    "priority": 3,
+    "passes": false
+  },
+  {
+    "id": "ops-docs-consistency",
+    "title": "운영 문서 정합성 유지",
+    "description": "README.md, CLAUDE.md, AGENTS.md, progress.md, feature-list.json의 운영 규칙과 실제 프로젝트 상태를 맞춘다.",
+    "priority": 4,
+    "passes": false
+  }
+]

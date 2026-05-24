@@ -22,7 +22,7 @@ GitHub에 소스 코드를 관리하고, Vercel로 호스팅하며, Cloudflare�
 
 | 영역 | 기술 | 선정 이유 |
 |------|------|----------|
-| 프레임워크 | **Next.js 15 (App Router)** | SSG/SSR, Vercel 최적 궁합 |
+| 프레임워크 | **Next.js 16.1.6 (App Router)** | SSG/SSR, Vercel 최적 궁합 |
 | 언어 | **TypeScript** | 타입 안전성, 개발 생산성 |
 | 스타일링 | **Tailwind CSS 4** | 빠른 UI 개발, 반응형 지원 |
 | 콘텐츠 | **MDX (Contentlayer2 또는 next-mdx-remote)** | 마크다운 + React 컴포넌트 혼용 |

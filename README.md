@@ -113,3 +113,10 @@ pnpm dev      # 개발 서버
 pnpm build    # 프로덕션 빌드
 pnpm lint     # ESLint
 ```
+
+## 운영 파일
+
+- `AGENTS.md`: Codex 작업 규칙과 레포 운영 기준
+- `feature-list.json`: 구현/정리할 작업 목록. AI는 `passes` 필드만 변경
+- `progress.md`: 세션별 진행 상태와 검증 결과
+- `init.sh`: 기본 환경 확인, lint 실행, 개발 서버 시작

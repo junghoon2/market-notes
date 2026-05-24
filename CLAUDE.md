@@ -8,7 +8,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm dev        # 개발 서버 실행 (localhost:3000)
 pnpm build      # 프로덕션 빌드
 pnpm lint       # ESLint 실행
+./init.sh       # 환경 확인, lint 실행 후 개발 서버 시작
 ```
+
+## 운영 파일
+
+- `AGENTS.md`: Codex 작업 규칙과 레포 운영 기준
+- `feature-list.json`: 구현/정리할 작업 목록. AI는 기존 항목의 `passes`만 변경
+- `progress.md`: 세션별 진행 상태와 검증 결과
+- `docs/preview/`: 검토 전 콘텐츠 초안
+- `content/posts/YYYY/`: 검토 후 발행본
 
 ## 아키텍처 개요
 
