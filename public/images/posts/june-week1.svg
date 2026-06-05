@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 가라앉은 황혼 하늘: 짙은 청회색 → 회보라 → 수평선의 옅은 호박빛 -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10141f"/>
+      <stop offset="45%" stop-color="#1c2233"/>
+      <stop offset="78%" stop-color="#3a3a4e"/>
+      <stop offset="100%" stop-color="#7a5a3a"/>
+    </linearGradient>
+    <!-- 어두운 수면 -->
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#473a30"/>
+      <stop offset="12%" stop-color="#23242f"/>
+      <stop offset="100%" stop-color="#0c0f17"/>
+    </linearGradient>
+    <!-- 구름 사이 낮은 해의 잔광 -->
+    <radialGradient id="afterglow" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#e8a85c" stop-opacity="0.85"/>
+      <stop offset="35%" stop-color="#b97b45" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#b97b45" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 수면 반사 -->
+    <linearGradient id="glimmer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8a85c" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#e8a85c" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softblur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="cloudblur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <!-- 하늘 -->
+  <rect width="800" height="380" fill="url(#sky)"/>
+
+  <!-- 별: 구름 걷힌 윗하늘에만 드문드문 -->
+  <g fill="#cdd6ea">
+    <circle cx="62" cy="44" r="1.1" opacity="0.5"/>
+    <circle cx="138" cy="92" r="0.8" opacity="0.35"/>
+    <circle cx="216" cy="38" r="1.3" opacity="0.55"/>
+    <circle cx="305" cy="74" r="0.9" opacity="0.4"/>
+    <circle cx="392" cy="30" r="1.2" opacity="0.5"/>
+    <circle cx="468" cy="88" r="0.8" opacity="0.3"/>
+    <circle cx="540" cy="52" r="1.4" opacity="0.6"/>
+    <circle cx="624" cy="96" r="0.9" opacity="0.35"/>
+    <circle cx="700" cy="40" r="1.1" opacity="0.5"/>
+    <circle cx="752" cy="110" r="0.8" opacity="0.3"/>
+    <circle cx="96" cy="140" r="0.9" opacity="0.3"/>
+    <circle cx="350" cy="120" r="0.8" opacity="0.25"/>
+    <circle cx="586" cy="146" r="0.9" opacity="0.3"/>
+    <circle cx="676" cy="170" r="0.8" opacity="0.25"/>
+    <circle cx="170" cy="186" r="0.8" opacity="0.2"/>
+  </g>
+
+  <!-- 잔광: 수평선 중앙의 낮은 빛 -->
+  <ellipse cx="400" cy="380" rx="300" ry="150" fill="url(#afterglow)"/>
+
+  <!-- 낮게 깔린 구름층 -->
+  <g filter="url(#cloudblur)">
+    <ellipse cx="180" cy="250" rx="240" ry="34" fill="#171c2a" opacity="0.85"/>
+    <ellipse cx="600" cy="220" rx="280" ry="40" fill="#151a27" opacity="0.8"/>
+    <ellipse cx="420" cy="300" rx="320" ry="30" fill="#1d2030" opacity="0.75"/>
+    <ellipse cx="120" cy="330" rx="200" ry="24" fill="#262533" opacity="0.6"/>
+    <ellipse cx="680" cy="320" rx="220" ry="26" fill="#262533" opacity="0.6"/>
+  </g>
+
+  <!-- 비: 가늘게 비끼는 빗줄기 -->
+  <g stroke="#8d96ad" stroke-width="1" stroke-linecap="round" opacity="0.4">
+    <line x1="90" y1="180" x2="78" y2="240"/>
+    <line x1="170" y1="220" x2="158" y2="290"/>
+    <line x1="250" y1="160" x2="238" y2="225"/>
+    <line x1="330" y1="210" x2="318" y2="280"/>
+    <line x1="410" y1="170" x2="398" y2="230"/>
+    <line x1="490" y1="225" x2="478" y2="295"/>
+    <line x1="570" y1="175" x2="558" y2="240"/>
+    <line x1="650" y1="215" x2="638" y2="285"/>
+    <line x1="730" y1="165" x2="718" y2="230"/>
+    <line x1="130" y1="300" x2="120" y2="355"/>
+    <line x1="290" y1="310" x2="280" y2="360"/>
+    <line x1="450" y1="305" x2="440" y2="358"/>
+    <line x1="610" y1="300" x2="600" y2="352"/>
+    <line x1="760" y1="310" x2="750" y2="360"/>
+  </g>
+
+  <!-- 수평선의 가는 금빛 — 조정 속에 남은 온기 -->
+  <rect x="0" y="377" width="800" height="3" fill="#d99a55" opacity="0.9" filter="url(#softblur)"/>
+  <rect x="240" y="378" width="320" height="1.6" fill="#f3c98a"/>
+
+  <!-- 바다 -->
+  <rect y="380" width="800" height="220" fill="url(#sea)"/>
+
+  <!-- 잔광 반사 기둥 -->
+  <polygon points="360,380 440,380 470,600 330,600" fill="url(#glimmer)" opacity="0.5"/>
+
+  <!-- 잔물결: 정적인 수면 위 가로 결 -->
+  <g stroke-linecap="round">
+    <line x1="340" y1="402" x2="460" y2="402" stroke="#e8a85c" stroke-width="2" opacity="0.5"/>
+    <line x1="362" y1="426" x2="438" y2="426" stroke="#d99a55" stroke-width="2" opacity="0.38"/>
+    <line x1="330" y1="455" x2="468" y2="455" stroke="#c98c4e" stroke-width="2" opacity="0.3"/>
+    <line x1="356" y1="492" x2="446" y2="492" stroke="#b97b45" stroke-width="2" opacity="0.22"/>
+    <line x1="338" y1="535" x2="462" y2="535" stroke="#a86e3e" stroke-width="2" opacity="0.15"/>
+    <line x1="80" y1="416" x2="200" y2="416" stroke="#46506b" stroke-width="1.5" opacity="0.4"/>
+    <line x1="560" y1="438" x2="700" y2="438" stroke="#46506b" stroke-width="1.5" opacity="0.35"/>
+    <line x1="120" y1="480" x2="260" y2="480" stroke="#3a4358" stroke-width="1.5" opacity="0.3"/>
+    <line x1="540" y1="500" x2="660" y2="500" stroke="#3a4358" stroke-width="1.5" opacity="0.25"/>
+    <line x1="60" y1="545" x2="220" y2="545" stroke="#303749" stroke-width="1.5" opacity="0.2"/>
+    <line x1="590" y1="560" x2="740" y2="560" stroke="#303749" stroke-width="1.5" opacity="0.18"/>
+  </g>
+
+  <!-- 멀리 보이는 방파제 실루엣 -->
+  <polygon points="0,376 110,372 230,375 230,380 0,380" fill="#0a0d14"/>
+  <polygon points="620,374 720,371 800,374 800,380 620,380" fill="#0a0d14"/>
+  <rect x="86" y="356" width="5" height="20" fill="#0a0d14"/>
+  <circle cx="88.5" cy="354" r="2.6" fill="#e8a85c" opacity="0.9"/>
+  <circle cx="88.5" cy="354" r="6" fill="#e8a85c" opacity="0.3" filter="url(#softblur)"/>
+</svg>
