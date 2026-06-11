@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 따뜻한 새벽 하늘: 짙은 남청 → 호박빛 지평선 (투자철학 골드 테마) -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b1407"/>
+      <stop offset="45%" stop-color="#3a2c12"/>
+      <stop offset="80%" stop-color="#8a5e22"/>
+      <stop offset="100%" stop-color="#d9a441"/>
+    </linearGradient>
+    <!-- 잔잔한 수면 -->
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8772f"/>
+      <stop offset="14%" stop-color="#3a2c14"/>
+      <stop offset="100%" stop-color="#120d05"/>
+    </linearGradient>
+    <!-- 지평선의 잔광 -->
+    <radialGradient id="glow" cx="50%" cy="100%" r="65%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#d9a441" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#d9a441" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 수면 반사 -->
+    <linearGradient id="glimmer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softblur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- 하늘 -->
+  <rect width="800" height="400" fill="url(#sky)"/>
+  <!-- 지평선 잔광 -->
+  <rect width="800" height="400" fill="url(#glow)"/>
+
+  <!-- 별: 윗하늘에 드문드문 -->
+  <g fill="#f3e6c4">
+    <circle cx="80" cy="50" r="1.1" opacity="0.6"/>
+    <circle cx="180" cy="90" r="0.9" opacity="0.45"/>
+    <circle cx="300" cy="40" r="1.0" opacity="0.5"/>
+    <circle cx="520" cy="70" r="0.9" opacity="0.4"/>
+    <circle cx="650" cy="48" r="1.1" opacity="0.55"/>
+    <circle cx="730" cy="100" r="0.8" opacity="0.4"/>
+  </g>
+
+  <!-- 북극성 (원칙 = 길잡이 별): 지평선 위 높이 고정된 밝은 별 -->
+  <g transform="translate(400 150)">
+    <circle r="40" fill="#fbbf24" opacity="0.18" filter="url(#softblur)"/>
+    <circle r="5.5" fill="#fff3d6"/>
+    <g stroke="#fde9b8" stroke-width="1.6" opacity="0.85">
+      <line x1="0" y1="-26" x2="0" y2="-12"/>
+      <line x1="0" y1="12" x2="0" y2="26"/>
+      <line x1="-26" y1="0" x2="-12" y2="0"/>
+      <line x1="12" y1="0" x2="26" y2="0"/>
+    </g>
+  </g>
+
+  <!-- 수면 -->
+  <rect y="400" width="800" height="200" fill="url(#sea)"/>
+  <!-- 별빛이 수면에 떨어지는 길 -->
+  <polygon points="400,400 372,600 428,600" fill="url(#glimmer)"/>
+  <polygon points="400,400 388,600 412,600" fill="#fbbf24" opacity="0.4"/>
+
+  <!-- 우상향하는 능선/추세선 (이익의 우상향을 암시) -->
+  <polyline points="0,395 130,388 250,392 380,378 520,384 660,366 800,372"
+            fill="none" stroke="#2a1f0c" stroke-width="3" opacity="0.7"/>
+
+  <!-- 잔잔한 수면 결 -->
+  <g stroke="#f3d27a" stroke-width="1" opacity="0.25">
+    <line x1="120" y1="470" x2="240" y2="470"/>
+    <line x1="540" y1="500" x2="690" y2="500"/>
+    <line x1="300" y1="540" x2="470" y2="540"/>
+  </g>
+</svg>
