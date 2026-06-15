@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 투자철학 골드 테마: 짙은 남청 → 호박빛 (stock-selection과 동일 계열) -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#161009"/>
+      <stop offset="55%" stop-color="#2e2310"/>
+      <stop offset="100%" stop-color="#7a5320"/>
+    </linearGradient>
+    <!-- 이익 라인: 길게 우상향하는 골드 -->
+    <linearGradient id="gain" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d9a441"/>
+      <stop offset="100%" stop-color="#f5d98b"/>
+    </linearGradient>
+    <!-- 손실 라인: 짧게 끊기는 차분한 적색 -->
+    <linearGradient id="loss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e07a5f"/>
+      <stop offset="100%" stop-color="#9b4636"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#f5d98b" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f5d98b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <!-- 옅은 격자 -->
+  <g stroke="#d9a441" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="420" x2="800" y2="420"/>
+  </g>
+
+  <!-- 손실은 짧게: 빠르게 떨어지다 곧바로 끊긴 짧은 라인 -->
+  <polyline points="120,360 165,415 205,455"
+            fill="none" stroke="url(#loss)" stroke-width="6"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 손절 지점을 끊어내는 작은 절단 표시 -->
+  <g stroke="#e07a5f" stroke-width="4" stroke-linecap="round">
+    <line x1="192" y1="468" x2="218" y2="442"/>
+    <line x1="218" y1="468" x2="192" y2="442"/>
+  </g>
+
+  <!-- 이익은 길게: 길게 이어지며 우상향하는 골드 라인 -->
+  <polyline points="250,470 360,440 460,395 560,315 660,235 720,150"
+            fill="none" stroke="url(#gain)" stroke-width="6"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#f5d98b">
+    <circle cx="250" cy="470" r="7"/>
+    <circle cx="360" cy="440" r="7"/>
+    <circle cx="460" cy="395" r="7"/>
+    <circle cx="560" cy="315" r="7"/>
+    <circle cx="660" cy="235" r="7"/>
+    <circle cx="720" cy="150" r="9"/>
+  </g>
+
+  <!-- 제목 -->
+  <text x="80" y="120"
+        font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif"
+        font-size="60" font-weight="700" fill="#f5d98b">손실은 짧게</text>
+  <text x="80" y="185"
+        font-family="'Apple SD Gothic Neo','Noto Sans KR',sans-serif"
+        font-size="60" font-weight="700" fill="#f5d98b">이익은 길게</text>
+</svg>
