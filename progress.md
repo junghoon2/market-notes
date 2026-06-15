@@ -14,6 +14,15 @@
 
 ## 검증 결과
 
+- 2026-06-16: `docs/preview/손실은짧게이익은길게.md` 리뷰 및 문장 수정 완료.
+  - frontmatter 추가, 로컬 절대경로 이미지를 Markdown 이미지 경로로 변경.
+  - 손절 기준과 종목 판단 기준을 분리해 글 흐름을 정리.
+- 2026-06-16: `pnpm lint` 실패.
+  - 기존 추적 항목과 동일한 오류: `TOC.tsx`, `StockChart.tsx`, `SearchDialog.tsx`, `ThemeToggle.tsx`.
+  - 기존 경고: `PostCard.tsx`, `GiscusComments.tsx`.
+- 2026-06-16: `pnpm build` 1차 실패.
+  - sandbox 네트워크 제한으로 Google Fonts fetch 실패.
+- 2026-06-16: 네트워크 허용 후 `pnpm build` 통과.
 - 2026-05-24: `pnpm lint` 실패.
   - 오류: `src/components/blog/TOC.tsx`의 `react-hooks/set-state-in-effect`.
   - 오류: `src/components/chart/StockChart.tsx`의 `react-hooks/set-state-in-effect`.
