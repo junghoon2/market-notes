@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 급락의 하늘: 짙은 먹빛 → 잿빛 청록 → 차가운 하단 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#05070d"/>
+      <stop offset="35%" style="stop-color:#111827"/>
+      <stop offset="65%" style="stop-color:#1e3a45"/>
+      <stop offset="100%" style="stop-color:#0a1622"/>
+    </linearGradient>
+    <radialGradient id="stormlight" cx="62%" cy="22%" r="48%">
+      <stop offset="0%" style="stop-color:#475569;stop-opacity:0.55"/>
+      <stop offset="60%" style="stop-color:#334155;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="bolt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef9c3;stop-opacity:1"/>
+      <stop offset="60%" style="stop-color:#67e8f9;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155"/>
+      <stop offset="100%" style="stop-color:#0a1622"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a45"/>
+      <stop offset="100%" style="stop-color:#07101a"/>
+    </linearGradient>
+    <linearGradient id="crest" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#67e8f9;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="downbeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="boltblur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="starblur">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <!-- 폭풍 하늘 배경 -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- 구름 사이로 새는 차가운 빛무리 -->
+  <ellipse cx="500" cy="130" rx="360" ry="200" fill="url(#stormlight)" filter="url(#glow)"/>
+
+  <!-- 흐릿한 별 (구름 틈) -->
+  <g fill="#cbd5e1">
+    <circle cx="60" cy="40" r="0.9" opacity="0.5"/>
+    <circle cx="140" cy="28" r="0.7" opacity="0.4"/>
+    <circle cx="250" cy="54" r="1.0" opacity="0.45"/>
+    <circle cx="700" cy="36" r="0.8" opacity="0.4"/>
+    <circle cx="760" cy="70" r="0.9" opacity="0.45"/>
+    <circle cx="120" cy="96" r="0.8" opacity="0.35"/>
+    <circle cx="330" cy="92" r="0.7" opacity="0.3"/>
+    <circle cx="650" cy="108" r="0.9" opacity="0.4"/>
+  </g>
+
+  <!-- 무거운 먹구름 띠 -->
+  <g>
+    <ellipse cx="200" cy="150" rx="180" ry="34" fill="#1e293b" opacity="0.7"/>
+    <ellipse cx="560" cy="120" rx="220" ry="40" fill="#0f172a" opacity="0.75"/>
+    <ellipse cx="380" cy="210" rx="260" ry="36" fill="#1e293b" opacity="0.6"/>
+    <ellipse cx="120" cy="240" rx="160" ry="28" fill="#0f172a" opacity="0.55"/>
+    <ellipse cx="680" cy="250" rx="190" ry="30" fill="#1e293b" opacity="0.55"/>
+  </g>
+
+  <!-- 하강 빛줄기 (쏟아지는 하락 압력) -->
+  <polygon points="250,160 290,160 250,440 220,440" fill="url(#downbeam)" opacity="0.6" filter="url(#boltblur)"/>
+  <polygon points="520,150 560,150 540,440 500,440" fill="url(#downbeam)" opacity="0.6" filter="url(#boltblur)"/>
+  <polygon points="380,200 410,200 400,430 370,430" fill="url(#downbeam)" opacity="0.5" filter="url(#boltblur)"/>
+
+  <!-- 번개: 급락을 가르는 섬광 -->
+  <g filter="url(#boltblur)">
+    <polygon points="470,70 452,250 486,238 458,430 540,210 502,222 528,70" fill="url(#bolt)" opacity="0.92"/>
+  </g>
+  <polygon points="470,70 460,210 484,202 466,360 512,200 486,208 512,70" fill="#fffef5" opacity="0.55"/>
+  <ellipse cx="486" cy="200" rx="70" ry="150" fill="#67e8f9" opacity="0.16" filter="url(#glow)"/>
+
+  <!-- 작은 보조 섬광 -->
+  <g filter="url(#boltblur)" opacity="0.7">
+    <polygon points="180,180 172,280 188,274 178,360 214,260 196,266 210,180" fill="url(#bolt)"/>
+  </g>
+
+  <!-- 밝은 섬광 점 -->
+  <g fill="#fffef5" filter="url(#starblur)">
+    <circle cx="470" cy="74" r="2.4" opacity="0.9"/>
+    <circle cx="182" cy="184" r="1.8" opacity="0.8"/>
+  </g>
+
+  <!-- 원경 거친 파도 능선 -->
+  <path d="M0,430 Q70,400 130,420 T260,418 Q330,392 400,420 T540,416 Q620,388 700,418 T800,420 L800,470 L0,470 Z" fill="url(#wave2)" opacity="0.8"/>
+
+  <!-- 전경 솟구치는 큰 파도 -->
+  <path d="M0,500 Q90,452 170,486 Q250,520 330,476 Q400,440 470,484 Q550,524 630,478 Q710,444 800,486 L800,600 L0,600 Z" fill="url(#wave1)"/>
+
+  <!-- 파도 마루의 차가운 빛 (포말) -->
+  <path d="M0,500 Q90,452 170,486 Q250,520 330,476 Q400,440 470,484 Q550,524 630,478 Q710,444 800,486 L800,498 Q710,456 630,490 Q550,536 470,496 Q400,452 330,488 Q250,532 170,498 Q90,464 0,512 Z" fill="url(#crest)" opacity="0.7"/>
+
+  <!-- 흩날리는 물보라 -->
+  <g fill="#e0f2fe">
+    <circle cx="170" cy="476" r="1.6" opacity="0.6"/>
+    <circle cx="158" cy="464" r="1.1" opacity="0.45"/>
+    <circle cx="332" cy="468" r="1.5" opacity="0.55"/>
+    <circle cx="344" cy="456" r="1.0" opacity="0.4"/>
+    <circle cx="470" cy="476" r="1.6" opacity="0.6"/>
+    <circle cx="458" cy="462" r="1.1" opacity="0.45"/>
+    <circle cx="630" cy="470" r="1.4" opacity="0.5"/>
+    <circle cx="642" cy="458" r="0.9" opacity="0.4"/>
+  </g>
+
+  <!-- 번개 수면 반사 -->
+  <ellipse cx="486" cy="500" rx="120" ry="10" fill="#67e8f9" opacity="0.16"/>
+  <ellipse cx="486" cy="520" rx="70" ry="5" fill="#cffafe" opacity="0.1"/>
+
+  <!-- 깊은 바닥 어둠 -->
+  <rect x="0" y="540" width="800" height="60" fill="#05070d" opacity="0.6"/>
+</svg>
