@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b"/>
+      <stop offset="35%" style="stop-color:#4c1d95"/>
+      <stop offset="65%" style="stop-color:#9d4a3f"/>
+      <stop offset="100%" style="stop-color:#c2703a"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.95"/>
+      <stop offset="45%" style="stop-color:#f59e0b;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="ridge1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b2a4a"/>
+      <stop offset="100%" style="stop-color:#241a33"/>
+    </linearGradient>
+    <linearGradient id="ridge2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f1730"/>
+      <stop offset="100%" style="stop-color:#150f22"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4c1d3f"/>
+      <stop offset="100%" style="stop-color:#150f22"/>
+    </linearGradient>
+    <filter id="softblur">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <!-- 하늘 배경 -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+
+  <!-- 은은한 별 -->
+  <g fill="#f5f3ff">
+    <circle cx="90" cy="70" r="1.4" opacity="0.7"/>
+    <circle cx="150" cy="110" r="1" opacity="0.5"/>
+    <circle cx="220" cy="60" r="1.6" opacity="0.6"/>
+    <circle cx="60" cy="150" r="1" opacity="0.4"/>
+    <circle cx="700" cy="80" r="1.5" opacity="0.6"/>
+    <circle cx="650" cy="50" r="1" opacity="0.5"/>
+    <circle cx="740" cy="130" r="1.2" opacity="0.5"/>
+    <circle cx="320" cy="45" r="1" opacity="0.4"/>
+  </g>
+
+  <!-- 노을 태양 -->
+  <circle cx="400" cy="330" r="150" fill="url(#sunGlow)"/>
+  <circle cx="400" cy="330" r="58" fill="#fde68a"/>
+
+  <!-- 원경 능선 -->
+  <polygon points="0,400 90,350 180,380 280,330 380,370 480,320 580,360 680,330 800,370 800,600 0,600" fill="url(#ridge1)" opacity="0.85"/>
+
+  <!-- 근경 능선 -->
+  <polygon points="0,600 0,430 100,400 210,440 320,400 420,440 540,395 650,435 760,405 800,430 800,600" fill="url(#ridge2)"/>
+
+  <!-- 수면 -->
+  <rect x="0" y="440" width="800" height="160" fill="url(#water)"/>
+
+  <!-- 태양 반사 -->
+  <ellipse cx="400" cy="470" rx="70" ry="14" fill="#fde68a" opacity="0.5"/>
+  <ellipse cx="400" cy="495" rx="110" ry="10" fill="#f59e0b" opacity="0.3"/>
+  <ellipse cx="400" cy="515" rx="150" ry="8" fill="#f59e0b" opacity="0.18"/>
+
+  <!-- 잔잔한 물결 -->
+  <g stroke="#fde68a" stroke-width="1" opacity="0.15" fill="none">
+    <path d="M50,460 Q90,455 130,460 T210,460"/>
+    <path d="M480,480 Q520,475 560,480 T640,480"/>
+    <path d="M100,530 Q160,524 220,530 T340,530"/>
+    <path d="M460,540 Q520,534 580,540 T700,540"/>
+  </g>
+
+  <!-- 안개 레이어 -->
+  <rect x="0" y="410" width="800" height="60" fill="#4c1d3f" opacity="0.35" filter="url(#softblur)"/>
+</svg>
