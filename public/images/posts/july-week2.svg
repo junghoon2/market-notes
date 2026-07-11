@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 여명 직전의 밤하늘: 깊은 남색 → 티일 → 지평선의 옅은 온기 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b1120"/>
+      <stop offset="35%" style="stop-color:#0f2740"/>
+      <stop offset="62%" style="stop-color:#155e63"/>
+      <stop offset="82%" style="stop-color:#b45309"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+    <radialGradient id="dawn" cx="50%" cy="80%" r="40%">
+      <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.85"/>
+      <stop offset="45%" style="stop-color:#f59e0b;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#b45309;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.35"/>
+      <stop offset="45%" style="stop-color:#155e63;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#0b1120;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="mountain1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2740"/>
+      <stop offset="100%" style="stop-color:#070c17"/>
+    </linearGradient>
+    <linearGradient id="mountain2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#0f2740"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="starblur">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <!-- 하늘 배경 -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- 지평선 여명 후광 -->
+  <ellipse cx="400" cy="470" rx="380" ry="180" fill="url(#dawn)" filter="url(#glow)"/>
+
+  <!-- 별 (상단 어두운 영역) -->
+  <g fill="white">
+    <circle cx="55" cy="40" r="1.0" opacity="0.7"/>
+    <circle cx="120" cy="22" r="0.8" opacity="0.5"/>
+    <circle cx="195" cy="55" r="1.2" opacity="0.8"/>
+    <circle cx="270" cy="30" r="0.7" opacity="0.5"/>
+    <circle cx="345" cy="48" r="0.9" opacity="0.6"/>
+    <circle cx="420" cy="24" r="1.1" opacity="0.7"/>
+    <circle cx="500" cy="52" r="0.8" opacity="0.5"/>
+    <circle cx="575" cy="33" r="1.3" opacity="0.8"/>
+    <circle cx="650" cy="50" r="0.9" opacity="0.6"/>
+    <circle cx="725" cy="26" r="1.0" opacity="0.7"/>
+    <circle cx="90" cy="88" r="0.7" opacity="0.5"/>
+    <circle cx="175" cy="100" r="1.0" opacity="0.6"/>
+    <circle cx="320" cy="92" r="0.8" opacity="0.4"/>
+    <circle cx="470" cy="98" r="0.9" opacity="0.5"/>
+    <circle cx="620" cy="82" r="1.1" opacity="0.6"/>
+    <circle cx="710" cy="100" r="0.7" opacity="0.4"/>
+    <circle cx="150" cy="150" r="0.8" opacity="0.4"/>
+    <circle cx="380" cy="135" r="0.7" opacity="0.35"/>
+    <circle cx="560" cy="155" r="0.9" opacity="0.4"/>
+    <circle cx="680" cy="140" r="0.7" opacity="0.35"/>
+  </g>
+
+  <!-- 밝은 별 -->
+  <g fill="white" filter="url(#starblur)">
+    <circle cx="195" cy="55" r="2.2" opacity="0.9"/>
+    <circle cx="575" cy="33" r="2.5" opacity="0.9"/>
+    <circle cx="420" cy="24" r="2.0" opacity="0.8"/>
+  </g>
+
+  <!-- 십자형 별빛 -->
+  <g stroke="white" stroke-width="0.6" opacity="0.5">
+    <line x1="575" y1="26" x2="575" y2="40"/>
+    <line x1="568" y1="33" x2="582" y2="33"/>
+  </g>
+
+  <!-- 옅은 구름대 -->
+  <g opacity="0.4">
+    <ellipse cx="220" cy="210" rx="130" ry="18" fill="#1e3a5f" opacity="0.5"/>
+    <ellipse cx="600" cy="195" rx="140" ry="16" fill="#1e3a5f" opacity="0.45"/>
+    <ellipse cx="360" cy="300" rx="150" ry="14" fill="#155e63" opacity="0.3"/>
+  </g>
+
+  <!-- 원경 산 -->
+  <polygon points="0,430 90,375 175,405 260,355 360,385 460,335 560,365 660,325 755,355 800,375 800,490 0,490" fill="url(#mountain2)" opacity="0.75"/>
+
+  <!-- 전경 산 -->
+  <polygon points="0,490 70,445 150,470 240,415 330,450 410,405 490,435 570,395 660,425 740,385 800,415 800,600 0,600" fill="url(#mountain1)"/>
+
+  <!-- 산 능선 위 여명 반사 -->
+  <polygon points="240,415 262,390 284,415" fill="#f59e0b" opacity="0.16"/>
+  <polygon points="410,405 432,377 454,405" fill="#fbbf24" opacity="0.2"/>
+  <polygon points="570,395 592,368 614,395" fill="#f59e0b" opacity="0.16"/>
+  <polygon points="740,385 760,360 782,385" fill="#fbbf24" opacity="0.16"/>
+
+  <!-- 수평선 위 옅은 빛줄기 -->
+  <g stroke="#fde68a" stroke-width="1" opacity="0.12">
+    <line x1="400" y1="470" x2="130" y2="360"/>
+    <line x1="400" y1="470" x2="250" y2="340"/>
+    <line x1="400" y1="470" x2="360" y2="330"/>
+    <line x1="400" y1="470" x2="470" y2="330"/>
+    <line x1="400" y1="470" x2="560" y2="345"/>
+    <line x1="400" y1="470" x2="680" y2="365"/>
+  </g>
+
+  <!-- 물 반사 -->
+  <rect x="0" y="490" width="800" height="110" fill="url(#water)"/>
+  <ellipse cx="400" cy="518" rx="210" ry="14" fill="#f59e0b" opacity="0.22"/>
+  <ellipse cx="400" cy="540" rx="150" ry="8" fill="#fde68a" opacity="0.14"/>
+  <ellipse cx="400" cy="560" rx="90" ry="5" fill="#f59e0b" opacity="0.1"/>
+
+  <!-- 전경 나무 실루엣 -->
+  <g fill="#070c17">
+    <polygon points="18,600 33,522 48,600"/>
+    <polygon points="46,600 64,512 82,600"/>
+    <polygon points="715,600 733,518 751,600"/>
+    <polygon points="748,600 765,508 782,600"/>
+    <polygon points="778,600 793,528 808,600"/>
+  </g>
+</svg>
