@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 폭풍이 지난 새벽 직전: 잔여 어둠 → 청록 박명 → 수면의 깊은 검정 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#070b14"/>
+      <stop offset="30%" style="stop-color:#0d1526"/>
+      <stop offset="58%" style="stop-color:#16283c"/>
+      <stop offset="76%" style="stop-color:#1f4152"/>
+      <stop offset="100%" style="stop-color:#04070d"/>
+    </linearGradient>
+    <!-- 수평선의 첫 빛: 하락 멈춤 -->
+    <radialGradient id="dawn" cx="50%" cy="72%" r="52%">
+      <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.62"/>
+      <stop offset="30%" style="stop-color:#fbbf24;stop-opacity:0.3"/>
+      <stop offset="62%" style="stop-color:#38bdf8;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:0"/>
+    </radialGradient>
+    <!-- 신규 편입(알파벳): 홀로 새로 뜬 별의 후광 -->
+    <radialGradient id="newstar" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95"/>
+      <stop offset="35%" style="stop-color:#a5f3fc;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#22d3ee;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="ridge1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22384c"/>
+      <stop offset="100%" style="stop-color:#0b131f"/>
+    </linearGradient>
+    <linearGradient id="ridge2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#132234"/>
+      <stop offset="100%" style="stop-color:#060a12"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b3a4d;stop-opacity:0.85"/>
+      <stop offset="45%" style="stop-color:#0d1c2b;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#03060b;stop-opacity:0.95"/>
+    </linearGradient>
+    <filter id="softblur"><feGaussianBlur stdDeviation="26"/></filter>
+    <filter id="starblur"><feGaussianBlur stdDeviation="3.2"/></filter>
+    <filter id="lineblur"><feGaussianBlur stdDeviation="1.6"/></filter>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- 잔여 폭풍운: 상단에 낮게 깔린 어두운 띠 -->
+  <ellipse cx="230" cy="86" rx="300" ry="52" fill="#0a1120" opacity="0.55" filter="url(#softblur)"/>
+  <ellipse cx="640" cy="52" rx="260" ry="42" fill="#0a1120" opacity="0.45" filter="url(#softblur)"/>
+
+  <!-- 별: 폭풍 위로 드러난 하늘 -->
+  <g fill="#e2e8f0">
+    <circle cx="62" cy="48" r="1.1" opacity="0.5"/>
+    <circle cx="118" cy="112" r="0.9" opacity="0.35"/>
+    <circle cx="164" cy="66" r="1.3" opacity="0.6"/>
+    <circle cx="205" cy="140" r="0.8" opacity="0.3"/>
+    <circle cx="246" cy="40" r="1.0" opacity="0.45"/>
+    <circle cx="288" cy="98" r="1.4" opacity="0.65"/>
+    <circle cx="325" cy="58" r="0.9" opacity="0.35"/>
+    <circle cx="358" cy="132" r="1.1" opacity="0.5"/>
+    <circle cx="402" cy="72" r="0.8" opacity="0.3"/>
+    <circle cx="438" cy="118" r="1.2" opacity="0.55"/>
+    <circle cx="478" cy="44" r="1.0" opacity="0.42"/>
+    <circle cx="512" cy="96" r="0.9" opacity="0.34"/>
+    <circle cx="548" cy="150" r="1.3" opacity="0.58"/>
+    <circle cx="586" cy="62" r="0.8" opacity="0.3"/>
+    <circle cx="622" cy="124" r="1.1" opacity="0.5"/>
+    <circle cx="658" cy="80" r="1.0" opacity="0.44"/>
+    <circle cx="694" cy="146" r="0.9" opacity="0.33"/>
+    <circle cx="728" cy="52" r="1.2" opacity="0.56"/>
+    <circle cx="762" cy="108" r="0.8" opacity="0.3"/>
+    <circle cx="88" cy="176" r="1.0" opacity="0.4"/>
+    <circle cx="142" cy="208" r="0.9" opacity="0.32"/>
+    <circle cx="196" cy="182" r="1.2" opacity="0.5"/>
+    <circle cx="262" cy="216" r="0.8" opacity="0.28"/>
+    <circle cx="316" cy="190" r="1.0" opacity="0.42"/>
+    <circle cx="372" cy="222" r="0.9" opacity="0.3"/>
+    <circle cx="428" cy="196" r="1.1" opacity="0.46"/>
+    <circle cx="486" cy="228" r="0.8" opacity="0.26"/>
+    <circle cx="542" cy="202" r="1.0" opacity="0.4"/>
+    <circle cx="602" cy="234" r="0.9" opacity="0.28"/>
+    <circle cx="664" cy="206" r="1.1" opacity="0.44"/>
+    <circle cx="722" cy="238" r="0.8" opacity="0.26"/>
+    <circle cx="46" cy="248" r="0.9" opacity="0.3"/>
+    <circle cx="176" cy="272" r="0.8" opacity="0.24"/>
+    <circle cx="352" cy="266" r="0.9" opacity="0.26"/>
+    <circle cx="508" cy="278" r="0.8" opacity="0.22"/>
+    <circle cx="676" cy="270" r="0.9" opacity="0.25"/>
+  </g>
+
+  <!-- 새로 뜬 별(신규 편입): 후광 + 십자 별빛 -->
+  <circle cx="596" cy="168" r="46" fill="url(#newstar)" opacity="0.85"/>
+  <circle cx="596" cy="168" r="3.6" fill="#ffffff" filter="url(#starblur)"/>
+  <circle cx="596" cy="168" r="1.9" fill="#ffffff"/>
+  <g stroke="#e0f9ff" stroke-width="1.1" opacity="0.7" filter="url(#lineblur)">
+    <line x1="596" y1="144" x2="596" y2="192"/>
+    <line x1="572" y1="168" x2="620" y2="168"/>
+  </g>
+
+  <!-- 수평선의 첫 빛 -->
+  <ellipse cx="400" cy="424" rx="420" ry="180" fill="url(#dawn)"/>
+  <rect x="0" y="418" width="800" height="3" fill="#fde68a" opacity="0.42" filter="url(#lineblur)"/>
+
+  <!-- 능선 2겹 -->
+  <polygon points="0,418 96,352 168,386 258,318 336,380 400,344 464,392 548,330 632,378 716,340 800,392 800,430 0,430"
+           fill="url(#ridge1)" opacity="0.95"/>
+  <polygon points="0,430 72,398 158,420 246,388 330,416 420,392 512,418 604,394 690,420 800,400 800,444 0,444"
+           fill="url(#ridge2)" opacity="0.9"/>
+
+  <!-- 수면 + 반사 -->
+  <rect x="0" y="440" width="800" height="160" fill="url(#water)"/>
+  <ellipse cx="400" cy="472" rx="128" ry="12" fill="#fde68a" opacity="0.3" filter="url(#lineblur)"/>
+  <ellipse cx="400" cy="506" rx="92" ry="8" fill="#fbbf24" opacity="0.2" filter="url(#lineblur)"/>
+  <ellipse cx="596" cy="486" rx="34" ry="5" fill="#a5f3fc" opacity="0.24" filter="url(#lineblur)"/>
+
+  <!-- 잔물결: 변동성이 남은 수면 -->
+  <g stroke="#7dd3fc" stroke-width="1" opacity="0.16">
+    <line x1="104" y1="462" x2="238" y2="462"/>
+    <line x1="512" y1="470" x2="672" y2="470"/>
+    <line x1="62" y1="494" x2="196" y2="494"/>
+    <line x1="452" y1="500" x2="620" y2="500"/>
+    <line x1="148" y1="528" x2="326" y2="528"/>
+    <line x1="536" y1="536" x2="700" y2="536"/>
+    <line x1="86" y1="562" x2="284" y2="562"/>
+    <line x1="470" y1="570" x2="656" y2="570"/>
+  </g>
+
+  <!-- 하단 감쇠 -->
+  <rect x="0" y="540" width="800" height="60" fill="#03060b" opacity="0.5"/>
+</svg>
