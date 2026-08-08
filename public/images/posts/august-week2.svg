@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 배경: 밤에서 새벽으로 넘어가는 하늘, 좌우 색온도를 갈라 디커플링을 표현 -->
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1024"/>
+      <stop offset="42%" stop-color="#131a35"/>
+      <stop offset="72%" stop-color="#22203f"/>
+      <stop offset="100%" stop-color="#3a2a3a"/>
+    </linearGradient>
+    <!-- 좌측: 식어가는 푸른 기운 (하락한 국장) -->
+    <linearGradient id="coolSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a5f8f" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#2a5f8f" stop-opacity="0"/>
+    </linearGradient>
+    <!-- 우측: 데워지는 금빛 기운 (상승한 미장) -->
+    <linearGradient id="warmGlow" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#f2a24b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f2a24b" stop-opacity="0"/>
+    </linearGradient>
+    <!-- 하강하는 궤적 -->
+    <linearGradient id="downTrail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7fb6e8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#3c6f9e" stop-opacity="0.05"/>
+    </linearGradient>
+    <!-- 상승하는 궤적 -->
+    <linearGradient id="upTrail" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f6c66a" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffd98a" stop-opacity="0.9"/>
+    </linearGradient>
+    <radialGradient id="coolOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#bcdcf7" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#5f9fd4" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#2a5f8f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warmOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff2cf" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#f7bd63" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#d97a2b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="55%" stop-color="#17203a"/>
+      <stop offset="100%" stop-color="#2b2438"/>
+    </linearGradient>
+    <linearGradient id="ridgeFar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#141d33"/>
+      <stop offset="100%" stop-color="#241f36"/>
+    </linearGradient>
+    <filter id="softblur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="starblur" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="trailblur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- 배경 하늘 -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <rect width="420" height="600" fill="url(#coolSide)"/>
+  <rect x="380" width="420" height="600" fill="url(#warmGlow)"/>
+
+  <!-- 별 -->
+  <g fill="#e8f0ff">
+    <circle cx="38" cy="52" r="1.3" opacity="0.75"/>
+    <circle cx="92" cy="118" r="0.9" opacity="0.5"/>
+    <circle cx="146" cy="44" r="1.6" opacity="0.85"/>
+    <circle cx="188" cy="96" r="1" opacity="0.55"/>
+    <circle cx="214" cy="30" r="1.2" opacity="0.7"/>
+    <circle cx="262" cy="140" r="0.8" opacity="0.45"/>
+    <circle cx="300" cy="62" r="1.5" opacity="0.8"/>
+    <circle cx="336" cy="112" r="1" opacity="0.5"/>
+    <circle cx="372" cy="36" r="1.1" opacity="0.65"/>
+    <circle cx="404" cy="150" r="0.9" opacity="0.42"/>
+    <circle cx="452" cy="74" r="1.4" opacity="0.72"/>
+    <circle cx="486" cy="26" r="0.9" opacity="0.5"/>
+    <circle cx="520" cy="128" r="1.2" opacity="0.6"/>
+    <circle cx="566" cy="58" r="1" opacity="0.55"/>
+    <circle cx="604" cy="104" r="1.5" opacity="0.7"/>
+    <circle cx="648" cy="34" r="0.9" opacity="0.45"/>
+    <circle cx="686" cy="90" r="1.2" opacity="0.6"/>
+    <circle cx="724" cy="46" r="1" opacity="0.5"/>
+    <circle cx="762" cy="126" r="1.3" opacity="0.62"/>
+    <circle cx="64" cy="182" r="0.9" opacity="0.4"/>
+    <circle cx="128" cy="216" r="1.1" opacity="0.48"/>
+    <circle cx="176" cy="164" r="0.8" opacity="0.36"/>
+    <circle cx="242" cy="196" r="1" opacity="0.42"/>
+    <circle cx="318" cy="222" r="0.9" opacity="0.38"/>
+    <circle cx="388" cy="188" r="1.1" opacity="0.44"/>
+    <circle cx="466" cy="212" r="0.8" opacity="0.35"/>
+    <circle cx="538" cy="176" r="1" opacity="0.42"/>
+    <circle cx="612" cy="208" r="0.9" opacity="0.38"/>
+    <circle cx="694" cy="170" r="1.1" opacity="0.45"/>
+    <circle cx="756" cy="204" r="0.8" opacity="0.34"/>
+    <circle cx="22" cy="248" r="0.9" opacity="0.3"/>
+    <circle cx="108" cy="278" r="0.8" opacity="0.28"/>
+    <circle cx="204" cy="262" r="0.9" opacity="0.3"/>
+    <circle cx="286" cy="290" r="0.7" opacity="0.26"/>
+    <circle cx="424" cy="268" r="0.8" opacity="0.28"/>
+    <circle cx="582" cy="286" r="0.9" opacity="0.3"/>
+    <circle cx="666" cy="256" r="0.7" opacity="0.25"/>
+    <circle cx="744" cy="282" r="0.9" opacity="0.3"/>
+  </g>
+
+  <!-- 밝은 별 (십자 광채) -->
+  <g filter="url(#starblur)" fill="#ffffff">
+    <circle cx="146" cy="44" r="2.6" opacity="0.9"/>
+    <circle cx="604" cy="104" r="2.4" opacity="0.85"/>
+    <circle cx="300" cy="62" r="2.2" opacity="0.8"/>
+  </g>
+  <g stroke="#ffffff" stroke-linecap="round" opacity="0.55">
+    <path d="M146 34 L146 54 M136 44 L156 44" stroke-width="1.1"/>
+    <path d="M604 95 L604 113 M595 104 L613 104" stroke-width="1"/>
+  </g>
+
+  <!-- 좌측 상단: 식어가는 구체 (하락 국장) -->
+  <circle cx="176" cy="196" r="120" fill="url(#coolOrb)" filter="url(#softblur)" opacity="0.55"/>
+  <circle cx="176" cy="196" r="26" fill="#cfe4f7" opacity="0.75"/>
+
+  <!-- 우측 하단부: 떠오르는 금빛 구체 (상승 미장) -->
+  <circle cx="628" cy="334" r="160" fill="url(#warmOrb)" filter="url(#softblur)" opacity="0.8"/>
+  <circle cx="628" cy="334" r="40" fill="#ffe6b0" opacity="0.95"/>
+
+  <!-- 갈라지는 두 궤적: 하나는 왼쪽 아래로, 하나는 오른쪽 위로 -->
+  <g fill="none" stroke-linecap="round" filter="url(#trailblur)">
+    <path d="M400 300 C 330 322, 262 356, 196 424 C 154 466, 122 500, 96 528"
+          stroke="url(#downTrail)" stroke-width="5" opacity="0.9"/>
+    <path d="M400 300 C 470 282, 540 254, 604 210 C 654 176, 700 142, 736 110"
+          stroke="url(#upTrail)" stroke-width="5" opacity="0.9"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M400 300 C 330 322, 262 356, 196 424 C 154 466, 122 500, 96 528"
+          stroke="#9ccbf0" stroke-width="1.6" opacity="0.5"/>
+    <path d="M400 300 C 470 282, 540 254, 604 210 C 654 176, 700 142, 736 110"
+          stroke="#ffdf9c" stroke-width="1.6" opacity="0.6"/>
+  </g>
+  <!-- 갈림점 -->
+  <circle cx="400" cy="300" r="14" fill="#ffffff" opacity="0.16" filter="url(#softblur)"/>
+  <circle cx="400" cy="300" r="4" fill="#ffffff" opacity="0.8"/>
+
+  <!-- 능선: 뒤쪽 -->
+  <path d="M0 452 L92 396 L164 428 L246 372 L332 420 L414 380 L500 424 L588 384 L676 420 L760 388 L800 406 L800 470 L0 470 Z"
+        fill="url(#ridgeFar)" opacity="0.9"/>
+  <!-- 능선: 앞쪽 -->
+  <path d="M0 486 L74 446 L152 478 L232 440 L318 482 L402 450 L486 486 L570 448 L664 484 L744 452 L800 472 L800 500 L0 500 Z"
+        fill="#0d1424" opacity="0.95"/>
+
+  <!-- 수면 -->
+  <rect y="500" width="800" height="100" fill="url(#water)"/>
+  <!-- 금빛 구체의 수면 반사 -->
+  <g opacity="0.5">
+    <ellipse cx="628" cy="516" rx="52" ry="4.5" fill="#ffd98a"/>
+  </g>
+  <g opacity="0.45" fill="#ffd08a">
+    <ellipse cx="628" cy="532" rx="42" ry="3.4"/>
+    <ellipse cx="628" cy="548" rx="30" ry="2.8"/>
+    <ellipse cx="628" cy="566" rx="20" ry="2.2"/>
+  </g>
+  <!-- 좌측 차가운 반사 -->
+  <g opacity="0.3" fill="#9ccbf0">
+    <ellipse cx="176" cy="520" rx="34" ry="3.2"/>
+    <ellipse cx="176" cy="540" rx="24" ry="2.6"/>
+    <ellipse cx="176" cy="562" rx="15" ry="2"/>
+  </g>
+
+  <!-- 수면 잔물결 -->
+  <g stroke="#6e8bb0" stroke-width="0.8" opacity="0.18" stroke-linecap="round">
+    <path d="M40 512 h60 M140 524 h48 M300 508 h70 M420 530 h56 M520 514 h44 M700 522 h64"/>
+    <path d="M80 556 h52 M220 548 h64 M380 566 h48 M540 552 h58 M690 570 h60"/>
+  </g>
+
+  <!-- 하단 비네트 -->
+  <rect y="540" width="800" height="60" fill="#070b16" opacity="0.55"/>
+</svg>
