@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 배경: 두 지수가 내려앉은 밤, 아래쪽만 금빛으로 버티는 하늘 -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050a16"/>
+      <stop offset="30%" stop-color="#0a1526"/>
+      <stop offset="56%" stop-color="#0f2434"/>
+      <stop offset="76%" stop-color="#1a3540"/>
+      <stop offset="90%" stop-color="#3d4a42"/>
+      <stop offset="100%" stop-color="#8a6a35"/>
+    </linearGradient>
+    <!-- 지평선을 붙잡고 있는 금빛 (주주환원이 만든 방어) -->
+    <radialGradient id="hold" cx="50%" cy="97%" r="62%">
+      <stop offset="0%" stop-color="#ffdc9c" stop-opacity="0.78"/>
+      <stop offset="32%" stop-color="#e0a54c" stop-opacity="0.36"/>
+      <stop offset="68%" stop-color="#3a6070" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#0f2434" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 방벽 위로 솟는 후광 -->
+    <radialGradient id="crest" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4d4" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#f3c274" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#c8873a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 위에서 내려오는 두 줄기의 하강 흐름 (코스피·나스닥) -->
+    <linearGradient id="fallA" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#7fa8c4" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#4d7690" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#22404f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fallB" x1="1" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#96a6c8" stop-opacity="0.44"/>
+      <stop offset="62%" stop-color="#55648c" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#22354f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b3a34"/>
+      <stop offset="42%" stop-color="#14242e"/>
+      <stop offset="100%" stop-color="#070d16"/>
+    </linearGradient>
+    <linearGradient id="ridgeFar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#132330"/>
+      <stop offset="50%" stop-color="#1c3340"/>
+      <stop offset="100%" stop-color="#132330"/>
+    </linearGradient>
+    <linearGradient id="ridgeMid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0b141d"/>
+      <stop offset="48%" stop-color="#111f28"/>
+      <stop offset="100%" stop-color="#0b141d"/>
+    </linearGradient>
+    <linearGradient id="bulwark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1119"/>
+      <stop offset="100%" stop-color="#03070d"/>
+    </linearGradient>
+    <filter id="softblur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="starblur" x="-160%" y="-160%" width="420%" height="420%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+  </defs>
+
+  <!-- 하늘 -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+
+  <!-- 별: 작고 흐린 것들 -->
+  <g fill="#dce9f4">
+    <circle cx="42" cy="38" r="1.2" opacity="0.55"/><circle cx="96" cy="72" r="0.9" opacity="0.4"/>
+    <circle cx="148" cy="30" r="1.5" opacity="0.7"/><circle cx="204" cy="88" r="1" opacity="0.45"/>
+    <circle cx="238" cy="44" r="0.8" opacity="0.35"/><circle cx="292" cy="66" r="1.3" opacity="0.6"/>
+    <circle cx="336" cy="26" r="1" opacity="0.5"/><circle cx="384" cy="94" r="0.9" opacity="0.38"/>
+    <circle cx="428" cy="52" r="1.4" opacity="0.66"/><circle cx="472" cy="34" r="1" opacity="0.44"/>
+    <circle cx="524" cy="80" r="1.2" opacity="0.52"/><circle cx="572" cy="42" r="0.9" opacity="0.36"/>
+    <circle cx="618" cy="70" r="1.5" opacity="0.68"/><circle cx="664" cy="28" r="1" opacity="0.46"/>
+    <circle cx="712" cy="60" r="1.1" opacity="0.5"/><circle cx="758" cy="90" r="0.9" opacity="0.34"/>
+    <circle cx="24" cy="126" r="1" opacity="0.42"/><circle cx="78" cy="164" r="1.3" opacity="0.55"/>
+    <circle cx="132" cy="118" r="0.9" opacity="0.33"/><circle cx="186" cy="152" r="1.1" opacity="0.48"/>
+    <circle cx="248" cy="132" r="1.4" opacity="0.6"/><circle cx="304" cy="170" r="0.9" opacity="0.35"/>
+    <circle cx="358" cy="124" r="1.2" opacity="0.52"/><circle cx="412" cy="158" r="1" opacity="0.4"/>
+    <circle cx="466" cy="136" r="1.3" opacity="0.57"/><circle cx="518" cy="176" r="0.9" opacity="0.32"/>
+    <circle cx="566" cy="128" r="1.1" opacity="0.46"/><circle cx="622" cy="160" r="1.4" opacity="0.62"/>
+    <circle cx="676" cy="120" r="1" opacity="0.4"/><circle cx="730" cy="150" r="1.2" opacity="0.5"/>
+    <circle cx="776" cy="122" r="0.9" opacity="0.34"/><circle cx="56" cy="210" r="1.1" opacity="0.44"/>
+    <circle cx="116" cy="242" r="0.9" opacity="0.3"/><circle cx="172" cy="206" r="1.2" opacity="0.47"/>
+    <circle cx="228" cy="238" r="1" opacity="0.36"/><circle cx="286" cy="214" r="1.3" opacity="0.52"/>
+    <circle cx="344" cy="248" r="0.9" opacity="0.28"/><circle cx="402" cy="212" r="1.1" opacity="0.42"/>
+    <circle cx="458" cy="244" r="1" opacity="0.33"/><circle cx="514" cy="208" r="1.2" opacity="0.46"/>
+    <circle cx="574" cy="240" r="0.9" opacity="0.3"/><circle cx="632" cy="212" r="1.1" opacity="0.4"/>
+    <circle cx="690" cy="244" r="1" opacity="0.32"/><circle cx="746" cy="208" r="1.2" opacity="0.44"/>
+  </g>
+
+  <!-- 밝은 별 3개 -->
+  <g fill="#ffffff">
+    <circle cx="164" cy="58" r="3" opacity="0.9" filter="url(#starblur)"/>
+    <circle cx="164" cy="58" r="1.5" opacity="1"/>
+    <circle cx="596" cy="106" r="2.6" opacity="0.85" filter="url(#starblur)"/>
+    <circle cx="596" cy="106" r="1.3" opacity="1"/>
+    <circle cx="392" cy="182" r="2.2" opacity="0.75" filter="url(#starblur)"/>
+    <circle cx="392" cy="182" r="1.1" opacity="0.95"/>
+  </g>
+  <!-- 십자 별빛 -->
+  <g stroke="#ffffff" stroke-width="0.8" opacity="0.5">
+    <line x1="164" y1="46" x2="164" y2="70"/><line x1="152" y1="58" x2="176" y2="58"/>
+    <line x1="596" y1="96" x2="596" y2="116"/><line x1="586" y1="106" x2="606" y2="106"/>
+  </g>
+
+  <!-- 위에서 내려오는 두 줄기: 두 지수의 하락 -->
+  <path d="M110 0 C 150 130 196 240 254 372 L 300 372 C 236 236 190 128 158 0 Z" fill="url(#fallA)"/>
+  <path d="M690 0 C 654 140 600 258 540 386 L 588 386 C 650 252 700 136 736 0 Z" fill="url(#fallB)"/>
+
+  <!-- 지평선을 붙잡는 금빛 -->
+  <rect y="230" width="800" height="370" fill="url(#hold)"/>
+
+  <!-- 먼 산 -->
+  <polygon points="0,406 92,352 168,388 258,332 342,382 430,340 520,386 604,344 694,384 800,346 800,470 0,470" fill="url(#ridgeFar)" opacity="0.9"/>
+  <!-- 가까운 산 -->
+  <polygon points="0,452 78,412 158,444 246,398 330,438 420,392 512,440 598,404 688,442 800,404 800,500 0,500" fill="url(#ridgeMid)"/>
+
+  <!-- 방벽 위로 솟는 후광 -->
+  <ellipse cx="400" cy="466" rx="250" ry="96" fill="url(#crest)" filter="url(#softblur)" opacity="0.62"/>
+  <ellipse cx="400" cy="472" rx="112" ry="46" fill="url(#crest)" opacity="0.8"/>
+
+  <!-- 버티고 선 방벽 (주주환원) -->
+  <path d="M256 500 L 268 452 L 322 452 L 330 476 L 400 440 L 470 476 L 478 452 L 532 452 L 544 500 Z" fill="url(#bulwark)"/>
+  <rect x="392" y="418" width="16" height="34" fill="url(#bulwark)"/>
+  <circle cx="400" cy="414" r="9" fill="#ffe9b6" opacity="0.92"/>
+  <circle cx="400" cy="414" r="20" fill="url(#crest)" opacity="0.55" filter="url(#starblur)"/>
+
+  <!-- 수면 -->
+  <rect y="500" width="800" height="100" fill="url(#water)"/>
+  <!-- 방벽 빛의 반사 -->
+  <ellipse cx="400" cy="512" rx="86" ry="9" fill="#ffdfa2" opacity="0.34" filter="url(#softblur)"/>
+  <ellipse cx="400" cy="536" rx="54" ry="6" fill="#f0c583" opacity="0.2" filter="url(#softblur)"/>
+  <ellipse cx="400" cy="566" rx="34" ry="4" fill="#e0b06a" opacity="0.13" filter="url(#softblur)"/>
+  <!-- 잔물결 -->
+  <g stroke="#9dc4c8" stroke-width="0.7" opacity="0.16">
+    <line x1="60" y1="516" x2="184" y2="516"/><line x1="520" y1="522" x2="672" y2="522"/>
+    <line x1="120" y1="542" x2="276" y2="542"/><line x1="486" y1="550" x2="640" y2="550"/>
+    <line x1="196" y1="572" x2="318" y2="572"/><line x1="470" y1="580" x2="596" y2="580"/>
+  </g>
+</svg>
