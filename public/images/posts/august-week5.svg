@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 배경: 해가 넘어간 뒤의 차가운 박명. 오르지도 내리지도 않는 정체 구간 -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#04070f"/>
+      <stop offset="26%" stop-color="#0a1220"/>
+      <stop offset="52%" stop-color="#132132"/>
+      <stop offset="74%" stop-color="#1e3244"/>
+      <stop offset="90%" stop-color="#2c4657"/>
+      <stop offset="100%" stop-color="#3d5b6b"/>
+    </linearGradient>
+    <!-- 수평선에 남은 옅은 빛. 기다림 -->
+    <radialGradient id="afterglow" cx="62%" cy="99%" r="58%">
+      <stop offset="0%" stop-color="#cfe0e8" stop-opacity="0.42"/>
+      <stop offset="34%" stop-color="#6f93a6" stop-opacity="0.2"/>
+      <stop offset="72%" stop-color="#263c4e" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#132132" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 낮게 뜬 달의 후광 -->
+    <radialGradient id="moonglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e8f1f6" stop-opacity="0.9"/>
+      <stop offset="34%" stop-color="#a8c4d4" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#43697f" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 왼쪽으로 흘러내리는 차가운 흐름 (국장 -5%대) -->
+    <linearGradient id="fall" x1="0.3" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7f9ab4" stop-opacity="0.34"/>
+      <stop offset="58%" stop-color="#48627c" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#1b2c3e" stop-opacity="0"/>
+    </linearGradient>
+    <!-- 오른쪽에서 옅게 올라오는 흐름 (미장 30%) -->
+    <linearGradient id="rise" x1="0.7" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8fb2a6" stop-opacity="0.3"/>
+      <stop offset="58%" stop-color="#4f7a74" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1b3240" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a4453"/>
+      <stop offset="38%" stop-color="#16283a"/>
+      <stop offset="100%" stop-color="#050a12"/>
+    </linearGradient>
+    <linearGradient id="ridgeFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#243b4d"/>
+      <stop offset="100%" stop-color="#16273a"/>
+    </linearGradient>
+    <linearGradient id="ridgeNear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101f2f"/>
+      <stop offset="100%" stop-color="#070e1a"/>
+    </linearGradient>
+    <linearGradient id="reflect" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbe8ef" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#dbe8ef" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softblur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="starblur" x="-160%" y="-160%" width="420%" height="420%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="lineblur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.1"/>
+    </filter>
+  </defs>
+
+  <!-- 하늘 -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <rect width="800" height="600" fill="url(#afterglow)"/>
+
+  <!-- 별: 성기고 흐리게. 밝은 별은 셋만 -->
+  <g fill="#dce8f2">
+    <circle cx="58" cy="46" r="1.1" opacity="0.5"/>
+    <circle cx="123" cy="88" r="0.8" opacity="0.36"/>
+    <circle cx="176" cy="34" r="1.3" opacity="0.55"/>
+    <circle cx="214" cy="112" r="0.7" opacity="0.3"/>
+    <circle cx="268" cy="62" r="1.0" opacity="0.46"/>
+    <circle cx="311" cy="26" r="0.8" opacity="0.34"/>
+    <circle cx="352" cy="104" r="1.2" opacity="0.5"/>
+    <circle cx="399" cy="52" r="0.7" opacity="0.28"/>
+    <circle cx="441" cy="126" r="0.9" opacity="0.4"/>
+    <circle cx="487" cy="38" r="1.1" opacity="0.48"/>
+    <circle cx="529" cy="94" r="0.8" opacity="0.33"/>
+    <circle cx="574" cy="58" r="1.0" opacity="0.44"/>
+    <circle cx="618" cy="120" r="0.7" opacity="0.29"/>
+    <circle cx="663" cy="42" r="1.2" opacity="0.5"/>
+    <circle cx="702" cy="98" r="0.8" opacity="0.35"/>
+    <circle cx="746" cy="66" r="1.0" opacity="0.43"/>
+    <circle cx="88" cy="152" r="0.7" opacity="0.26"/>
+    <circle cx="245" cy="168" r="0.9" opacity="0.32"/>
+    <circle cx="418" cy="186" r="0.7" opacity="0.24"/>
+    <circle cx="596" cy="172" r="0.8" opacity="0.28"/>
+    <circle cx="756" cy="196" r="0.7" opacity="0.22"/>
+    <circle cx="34" cy="214" r="0.6" opacity="0.2"/>
+    <circle cx="309" cy="230" r="0.6" opacity="0.18"/>
+    <circle cx="672" cy="238" r="0.6" opacity="0.18"/>
+  </g>
+  <g fill="#f2f8fc" filter="url(#starblur)">
+    <circle cx="176" cy="34" r="2.0" opacity="0.7"/>
+    <circle cx="487" cy="38" r="1.8" opacity="0.62"/>
+    <circle cx="663" cy="42" r="1.9" opacity="0.66"/>
+  </g>
+
+  <!-- 왼쪽 하강 흐름 / 오른쪽 상승 흐름 -->
+  <path d="M120 -20 L250 -20 L150 372 L60 372 Z" fill="url(#fall)" filter="url(#softblur)" opacity="0.85"/>
+  <path d="M262 -20 L352 -20 L262 372 L196 372 Z" fill="url(#fall)" filter="url(#softblur)" opacity="0.55"/>
+  <path d="M640 372 L724 372 L806 -20 L716 -20 Z" fill="url(#rise)" filter="url(#softblur)" opacity="0.75"/>
+
+  <!-- 낮게 뜬 달 -->
+  <circle cx="498" cy="322" r="112" fill="url(#moonglow)" filter="url(#softblur)"/>
+  <circle cx="498" cy="322" r="30" fill="#eaf3f8" opacity="0.94"/>
+  <circle cx="498" cy="322" r="30" fill="url(#moonglow)" opacity="0.5"/>
+
+  <!-- 수평선 위 가로 띠: 위도 아래도 아닌 정체 -->
+  <g filter="url(#lineblur)">
+    <rect x="96" y="300" width="608" height="1.6" fill="#9fc0d2" opacity="0.24"/>
+    <rect x="168" y="286" width="464" height="1.2" fill="#9fc0d2" opacity="0.15"/>
+    <rect x="216" y="314" width="368" height="1.2" fill="#9fc0d2" opacity="0.13"/>
+  </g>
+
+  <!-- 먼 능선 -->
+  <path d="M0 372 L78 340 L142 356 L214 322 L286 350 L360 330 L432 352 L506 334 L578 354 L652 336 L724 356 L800 340 L800 372 Z"
+        fill="url(#ridgeFar)" opacity="0.9"/>
+  <!-- 가까운 능선 -->
+  <path d="M0 400 L96 372 L168 392 L252 366 L332 390 L414 372 L498 394 L580 374 L666 396 L746 378 L800 392 L800 400 Z"
+        fill="url(#ridgeNear)"/>
+
+  <!-- 잔잔한 수면 -->
+  <rect x="0" y="400" width="800" height="200" fill="url(#water)"/>
+  <!-- 달 반사: 흔들림 없이 곧게 -->
+  <rect x="490" y="404" width="16" height="176" fill="url(#reflect)" opacity="0.7"/>
+  <g fill="#dbe8ef">
+    <ellipse cx="498" cy="418" rx="26" ry="2.2" opacity="0.28"/>
+    <ellipse cx="498" cy="446" rx="34" ry="2.0" opacity="0.2"/>
+    <ellipse cx="498" cy="478" rx="42" ry="1.8" opacity="0.15"/>
+    <ellipse cx="498" cy="514" rx="50" ry="1.6" opacity="0.11"/>
+    <ellipse cx="498" cy="552" rx="58" ry="1.4" opacity="0.07"/>
+  </g>
+  <!-- 수면 잔결 -->
+  <g fill="#8fb2c6">
+    <rect x="82" y="432" width="118" height="1.2" opacity="0.12"/>
+    <rect x="612" y="452" width="142" height="1.2" opacity="0.1"/>
+    <rect x="146" y="498" width="96" height="1.1" opacity="0.08"/>
+    <rect x="574" y="530" width="130" height="1.1" opacity="0.07"/>
+    <rect x="248" y="566" width="88" height="1.0" opacity="0.05"/>
+  </g>
+</svg>
