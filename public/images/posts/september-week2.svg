@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#080f25"/><stop offset="1" stop-color="#263c55"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#e6c784" stop-opacity=".65"/><stop offset="1" stop-color="#e6c784" stop-opacity="0"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h800v600H0z"/>
+  <ellipse cx="512" cy="212" rx="230" ry="190" fill="url(#light)"/>
+  <g fill="#edf4ff" opacity=".6">
+    <circle cx="40" cy="50" r="1"/><circle cx="90" cy="130" r="2"/><circle cx="150" cy="70" r="1"/>
+    <circle cx="220" cy="190" r="1"/><circle cx="290" cy="50" r="2"/><circle cx="350" cy="130" r="1"/>
+    <circle cx="430" cy="70" r="1"/><circle cx="580" cy="50" r="1"/><circle cx="650" cy="140" r="2"/>
+    <circle cx="710" cy="60" r="1"/><circle cx="760" cy="210" r="1"/><circle cx="65" cy="270" r="1"/>
+  </g>
+  <circle cx="512" cy="180" r="29" fill="#efdaa4" opacity=".5" filter="url(#glow)"/>
+  <circle cx="512" cy="180" r="19" fill="#efdaa4"/>
+  <path d="M0 420 125 296 240 380 395 198 590 389 692 291 800 367V600H0Z" fill="#456373"/>
+  <path d="m333 273 62-75 78 97-77-44-25 27-9-25z" fill="#d4d7ba"/>
+  <path d="M0 485 161 380 272 464 421 356 590 470 738 355 800 401V600H0Z" fill="#122737"/>
+  <path d="M0 541 146 493 267 529 409 462 590 532 701 481 800 520V600H0Z" fill="#091924"/>
+</svg>
