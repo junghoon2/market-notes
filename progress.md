@@ -19,6 +19,8 @@
   - 사용자가 준비한 발행본의 나머지 편집 내용 유지.
   - 실제 remark-gfm/MDX 렌더링에서 `<strong>31.42%가</strong>` 생성 및 미변환 `**` 없음 확인. `pnpm build` 통과.
   - `pnpm lint`: 기존 오류 4개·경고 2개 재현.
+  - `6281189` Vercel Production 배포 성공. 실제 `/blog/September-week2-record` HTTP 200, 수정한 9곳의 `<strong>` 태그 및 배포 CSS `.prose strong{font-weight:600}` 확인.
+  - Browser 런타임에 연결된 브라우저가 없어 시각 검증은 수행하지 못함. 실제 사이트 HTML/CSS로 검증.
 
 - 2026-09-12: 37W 주간 투자 기록 초안과 썸네일 작성.
   - `docs/preview/September-week2-record.md`, `public/images/posts/september-week2.svg` 추가. 발행본 이동은 하지 않음.
