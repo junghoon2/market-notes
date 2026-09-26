@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#090e28"/><stop offset="1" stop-color="#303958"/></linearGradient>
+<radialGradient id="gold"><stop stop-color="#ffd58a" stop-opacity=".65"/><stop offset="1" stop-color="#ffd58a" stop-opacity="0"/></radialGradient>
+<radialGradient id="blue"><stop stop-color="#77cfe1" stop-opacity=".55"/><stop offset="1" stop-color="#77cfe1" stop-opacity="0"/></radialGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#23324d"/><stop offset="1" stop-color="#080e21"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<path fill="url(#sky)" d="M0 0h800v600H0z"/>
+<ellipse cx="290" cy="240" rx="210" ry="195" fill="url(#gold)"/>
+<ellipse cx="535" cy="190" rx="195" ry="175" fill="url(#blue)"/>
+<g fill="#dce9f4"><circle cx="25" cy="20" r="2" opacity=".5"/>
+<circle cx="162" cy="93" r="1" opacity=".5"/>
+<circle cx="299" cy="166" r="1" opacity=".5"/>
+<circle cx="436" cy="239" r="1" opacity=".5"/>
+<circle cx="573" cy="312" r="1" opacity=".5"/>
+<circle cx="710" cy="75" r="1" opacity=".5"/>
+<circle cx="97" cy="148" r="1" opacity=".5"/>
+<circle cx="234" cy="221" r="1" opacity=".5"/>
+<circle cx="371" cy="294" r="1" opacity=".5"/>
+<circle cx="508" cy="57" r="2" opacity=".5"/>
+<circle cx="645" cy="130" r="1" opacity=".5"/>
+<circle cx="32" cy="203" r="1" opacity=".5"/>
+<circle cx="169" cy="276" r="1" opacity=".5"/>
+<circle cx="306" cy="39" r="1" opacity=".5"/>
+<circle cx="443" cy="112" r="1" opacity=".5"/>
+<circle cx="580" cy="185" r="1" opacity=".5"/>
+<circle cx="717" cy="258" r="1" opacity=".5"/>
+<circle cx="104" cy="21" r="1" opacity=".5"/>
+<circle cx="241" cy="94" r="2" opacity=".5"/>
+<circle cx="378" cy="167" r="1" opacity=".5"/>
+<circle cx="515" cy="240" r="1" opacity=".5"/>
+<circle cx="652" cy="313" r="1" opacity=".5"/>
+<circle cx="39" cy="76" r="1" opacity=".5"/>
+<circle cx="176" cy="149" r="1" opacity=".5"/>
+<circle cx="313" cy="222" r="1" opacity=".5"/>
+<circle cx="450" cy="295" r="1" opacity=".5"/>
+<circle cx="587" cy="58" r="1" opacity=".5"/>
+<circle cx="724" cy="131" r="2" opacity=".5"/>
+<circle cx="111" cy="204" r="1" opacity=".5"/>
+<circle cx="248" cy="277" r="1" opacity=".5"/>
+<circle cx="385" cy="40" r="1" opacity=".5"/>
+<circle cx="522" cy="113" r="1" opacity=".5"/>
+<circle cx="659" cy="186" r="1" opacity=".5"/>
+<circle cx="46" cy="259" r="1" opacity=".5"/>
+<circle cx="183" cy="22" r="1" opacity=".5"/>
+<circle cx="320" cy="95" r="1" opacity=".5"/>
+<circle cx="457" cy="168" r="2" opacity=".5"/>
+<circle cx="594" cy="241" r="1" opacity=".5"/>
+<circle cx="731" cy="314" r="1" opacity=".5"/>
+<circle cx="118" cy="77" r="1" opacity=".5"/>
+<circle cx="255" cy="150" r="1" opacity=".5"/>
+<circle cx="392" cy="223" r="1" opacity=".5"/>
+<circle cx="529" cy="296" r="1" opacity=".5"/>
+<circle cx="666" cy="59" r="1" opacity=".5"/>
+<circle cx="53" cy="132" r="1" opacity=".5"/></g>
+<path d="M95 338L190 280 290 240 375 170" stroke="#f9d593" fill="none" stroke-width="2" opacity=".55"/>
+<path d="M405 320L465 260 535 190 650 130" stroke="#84d8e9" fill="none" stroke-width="2" opacity=".6"/>
+<g fill="#ffd996"><circle cx="190" cy="280" r="4"/><circle cx="290" cy="240" r="8"/><circle cx="375" cy="170" r="4"/><circle cx="290" cy="240" r="18" opacity=".65" filter="url(#glow)"/></g>
+<g fill="#a6e7f0"><circle cx="465" cy="260" r="4"/><circle cx="535" cy="190" r="8"/><circle cx="650" cy="130" r="4"/><circle cx="535" cy="190" r="18" opacity=".65" filter="url(#glow)"/></g>
+<path d="M0 410L95 340 165 378 250 325 365 385 450 335 570 365 665 312 800 395V600H0Z" fill="#17243d"/>
+<path d="M0 432L135 390 270 428 430 375 580 419 700 377 800 412V600H0Z" fill="#0e192e"/>
+<path d="M0 450H800V600H0Z" fill="url(#water)"/>
+<path d="M270 465h40m-62 16h85m-112 20h137m-160 26h185" stroke="#ffd996" opacity=".3"/>
+<path d="M515 459h40m-63 19h86m-108 20h132m-157 25h182" stroke="#a6e7f0" opacity=".3"/>
+<path d="M0 565Q120 530 250 566T520 570 800 546V600H0Z" fill="#080e1b"/>
+</svg>
