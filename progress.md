@@ -17,7 +17,8 @@
 - 2026-09-26: 사용자 승인으로 9월 4주차 최종본 발행 준비.
   - `content/posts/2026/September-week4-record.md`의 업무/개인 AI 사용 구분, 메타 36억 명 지표 정의와 공식 출처, 데이터 경쟁력의 개인 전망 표현을 수정. 나머지 사용자 편집 유지.
   - `pnpm build` 통과(46개 페이지). 생성된 글 HTML에서 수정 3곳·강조 렌더링 확인, `git diff --check` 통과. 기존 lint 오류는 앞선 검증과 동일한 코드 상태.
-  - 사용자의 “3곳 수정하고 발행해줘”에 따라 발행본 커밋·푸시 및 실제 배포 검증 진행.
+  - 사용자의 “3곳 수정하고 발행해줘”에 따라 발행 커밋 `0062ec6` 푸시, GitHub Vercel 상태 success 확인. 공개 글 `https://market-notes-drab.vercel.app/blog/September-week4-record` HTTP 200.
+  - Chrome에서 제목·수정 3곳·표 3개·미변환 강조 없음 확인. 스크린샷으로 본문과 강조 표시 시각 검증 완료.
 
 - 2026-09-26: 39W 주간 투자 기록 초안과 썸네일 작성.
   - `docs/preview/September-week4-record.md`, `public/images/posts/september-week4.svg` 추가. 발행본 이동 없이 검토용 초안으로 저장.
