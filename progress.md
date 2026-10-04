@@ -17,6 +17,8 @@
 - 2026-10-04: 사용자 요청으로 10월 1주차 발행 진행.
   - `content/posts/2026/October-week1-record.md`의 사용자 편집본을 그대로 발행. 리뷰에서 제안한 표현 수정은 적용하지 않음.
   - 종목별 수치·평가금 합계·증권사 판매수익 검산, MDX 표 3개·강조·썸네일 경로 검증 통과. 기존 lint 오류는 직전 검증과 동일한 코드 상태.
+  - `pnpm build` 통과(47개 페이지). 발행 커밋 `6abb928` push 및 Vercel success 확인. 공개 `/blog/October-week1-record` HTTP 200.
+  - Chrome에서 발행 제목·본문·표 3개·매매 금액 확인. 스크린샷으로 제목·본문·강조 표시 시각 검증 완료.
 
 - 2026-10-03: 40W 주간 투자 기록 초안과 썸네일 작성.
   - `docs/preview/October-week1-record.md`, `public/images/posts/october-week1.svg` 추가. 검토용 초안이며 발행본으로 이동하지 않음.
