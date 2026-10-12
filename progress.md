@@ -18,7 +18,8 @@
   - `content/posts/2026/October-week2-record.md`에서 리뷰 1번(실행 속도 회고)과 3번(월간 평가금 증가율의 납입 포함 표시)만 수정. 나머지 사용자 편집 유지.
   - 저장된 원본 시트 조회본과 종목·계좌 수치·매매 합계 대조 및 MDX 표 3개·강조·썸네일 경로 검증 통과. `git diff --check` 통과.
   - `pnpm lint`: 기존 오류 4개·경고 2개 재현. `pnpm build`: 제한 환경에서 Google Fonts fetch 실패 후 네트워크 허용으로 통과(48개 페이지).
-  - 사용자의 명시적 발행 요청에 따라 커밋·푸시 후 공개 배포 검증 진행.
+  - 발행 커밋 `85783ac` push 및 Vercel success 확인. 공개 `/blog/October-week2-record` HTTP 200.
+  - Chrome에서 제목·수정 2곳·표 3개·미변환 강조 없음 확인. 스크린샷으로 제목·본문·강조·수정된 회고 문장의 표시 검증 완료. 발행 작업 완료.
 
 - 2026-10-11: 41W(10/10 기준) 주간 투자 기록 초안과 썸네일 작성.
   - `docs/preview/October-week2-record.md`, `public/images/posts/october-week2.svg` 추가. 검토용 초안으로 저장, 발행본 이동은 하지 않음.
