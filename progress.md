@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-11-01 — 10월 5주차 발행
+
+- 사용자 발행 요청에 따라 `content/posts/2026/October-week5-record.md`의 `draft: true`를 제거했다. 발행 직전 사용자가 다시 수정한 AI 전망(10배 표현), 미국 주식 손실 표현, 메타 문단, 투자 스타일 문단 등을 그대로 보존했다.
+- `pnpm build` 통과(51개 페이지). 생성 HTML의 최종 문구·표 3개·강조 및 홈 목록 노출 확인. 콘텐츠만 변경하여 기존 lint는 재실행하지 않았다.
+- 공개 경로: https://market-notes-drab.vercel.app/blog/October-week5-record
+- Git 푸시 후 Vercel 배포와 Chrome 공개 페이지 검증을 진행한다.
+
 ## 최신 상태 — 2026-11-01 / 10월 5주차 사용자 수정본 문장 정리
 
 - 사용자가 만든 `content/posts/2026/October-week5-record.md`를 검토하고 승인한 표현 수정만 반영했다. 제목·구조·표·사용자가 줄인 회고 및 삭제한 설명을 보존했다. `docs/preview/October-week5-record.md`는 초기안으로 유지한다.
