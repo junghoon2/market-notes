@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="거친 바다 위에서 빛을 비추는 등대">
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#10182c"/><stop offset="1" stop-color="#354458"/></linearGradient>
+<linearGradient id="sea" x2="0" y2="1"><stop stop-color="#253d51"/><stop offset="1" stop-color="#080f20"/></linearGradient>
+<radialGradient id="light"><stop stop-color="#ffe4a1" stop-opacity=".7"/><stop offset="1" stop-color="#ffe4a1" stop-opacity="0"/></radialGradient>
+<linearGradient id="beam"><stop stop-color="#f9d88e" stop-opacity="0"/><stop offset="1" stop-color="#f9d88e" stop-opacity=".35"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="12"/></filter>
+</defs>
+<path fill="url(#sky)" d="M0 0h800v600H0z"/>
+<ellipse cx="320" cy="210" rx="280" ry="60" fill="#657381" opacity=".12" filter="url(#blur)"/>
+<ellipse cx="600" cy="140" rx="210" ry="48" fill="#080f20" opacity=".5" filter="url(#blur)"/>
+<path fill="url(#sea)" d="M0 335q100-20 200 0t200 0t200 0t200 0v265H0z"/>
+<path d="M0 390q60-45 125 0t125 0t125 0t125 0t125 0t175 0M0 455q70-50 145 0t145 0t145 0t145 0t220 0M0 530q90-55 175 0t175 0t175 0t275 0" stroke="#51798a" stroke-width="3" opacity=".45" fill="none"/>
+<path d="M0 410q80-40 160 0t160 0t160 0t160 0t160 0M0 490q90-45 180 0t180 0t180 0t260 0" stroke="#7ca0a4" stroke-width="1.5" opacity=".3" fill="none"/>
+<path d="M510 600l40-120 60-43 45 20 50 50 95 35v58z" fill="#0c1523"/>
+<path d="M579 450l12-198h38l13 198z" fill="#88979b"/>
+<path d="M612 252h17l13 198h-30z" fill="#536571"/>
+<path d="M588 317h45l4 40h-52z" fill="#354454"/>
+<path d="M586 248v-35h48v35z" fill="#ffd88a"/>
+<path d="M579 213l31-27 31 27zM580 247h60v9h-60z" fill="#172333"/>
+<path d="M597 215v31m25-31v31" stroke="#354454" stroke-width="4"/>
+<path d="M90 125l520 100v14L90 345z" fill="url(#beam)"/>
+<circle cx="610" cy="230" r="100" fill="url(#light)"/>
+<path d="M600 450v-30a10 10 0 0 1 20 0v30z" fill="#152133"/>
+<path d="M42 290l13-26m75 31 13-26m73-25 13-26m78 42 13-26m82-8 13-26m-82 102 13-26m-177 69 13-26m-77 143 13-26m346-90 13-26m264-160 13-26" stroke="#a6bec9" opacity=".2" stroke-width="2"/>
+<path d="M530 476l31-12m-8 37 25-12m99 28 22 12m-161 35 28-14m127 30 32 12" stroke="#66818a" stroke-width="3" opacity=".4"/>
+</svg>
+
