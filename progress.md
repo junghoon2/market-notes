@@ -1,5 +1,13 @@
 # Progress
 
+## 최신 상태 — 2026-11-09 / 11월 1주차 발행 준비
+
+- 사용자 발행 승인에 따라 `content/posts/2026/November-week1-record.md`의 `draft: true`를 제거했다. 발행 직전 사용자가 수정한 문단 연결, 팔란티어·스페이스X·메타에 대한 평가, 패시브 투자 회고, 반등을 기다리는 심정을 그대로 보존했다.
+- `pnpm build`: 제한 환경에서 Google Fonts 연결 실패. 네트워크 허용 후 통과(52개 페이지). 생성 HTML에서 최종 문구·표 3개·미변환 강조 없음·홈 목록 노출 확인. `git diff --check` 통과. 콘텐츠 변경으로 앱 lint는 재실행하지 않았다.
+- Chrome 연결은 두 번 모두 사용자에 의해 세션 중단되었다는 도구 응답으로 종료됐다. 이후 사용자 재개 요청에 따라 배포 상태와 HTTP·HTML 검증으로 발행을 확인한다. 시각 검증은 미완료로 구분한다.
+- 공개 경로: https://market-notes-drab.vercel.app/blog/November-week1-record
+- 다음 작업: 발행 커밋·푸시, 해당 커밋의 Vercel 배포 성공 및 공개 페이지 확인.
+
 ## 최신 상태 — 2026-11-09 / 11월 1주차 사용자 수정본 문장 정리
 
 - 사용자 요청에 따라 `content/posts/2026/November-week1-record.md`의 리뷰 권고를 반영했다. 사용자 회고·표·구조를 유지하며 어법·띄어쓰기·Reuters 링크 연결, 반등 기대와 비중 축소의 갈등 표현을 정리했다. 초기 `docs/preview/` 초안은 보존했다.
