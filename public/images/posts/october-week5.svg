@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="저녁 항구에 정박한 배와 따뜻한 불빛">
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#0b1329"/><stop offset="1" stop-color="#535064"/></linearGradient>
+<linearGradient id="water" x2="0" y2="1"><stop stop-color="#294450"/><stop offset="1" stop-color="#0a1929"/></linearGradient>
+<radialGradient id="halo"><stop stop-color="#f6cb83" stop-opacity=".5"/><stop offset="1" stop-color="#f6cb83" stop-opacity="0"/></radialGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="7"/></filter>
+</defs>
+<path fill="url(#sky)" d="M0 0h800v600H0z"/>
+<g fill="#d3dfeb"><circle cx="31" cy="19" r="1.8" opacity="0.2"/>
+<circle cx="168" cy="90" r="1" opacity="0.30000000000000004"/>
+<circle cx="305" cy="161" r="1" opacity="0.4"/>
+<circle cx="442" cy="232" r="1" opacity="0.5"/>
+<circle cx="579" cy="33" r="1" opacity="0.6000000000000001"/>
+<circle cx="716" cy="104" r="1" opacity="0.2"/>
+<circle cx="53" cy="175" r="1" opacity="0.30000000000000004"/>
+<circle cx="190" cy="246" r="1" opacity="0.4"/>
+<circle cx="327" cy="47" r="1" opacity="0.5"/>
+<circle cx="464" cy="118" r="1.8" opacity="0.6000000000000001"/>
+<circle cx="601" cy="189" r="1" opacity="0.2"/>
+<circle cx="738" cy="260" r="1" opacity="0.30000000000000004"/>
+<circle cx="75" cy="61" r="1" opacity="0.4"/>
+<circle cx="212" cy="132" r="1" opacity="0.5"/>
+<circle cx="349" cy="203" r="1" opacity="0.6000000000000001"/>
+<circle cx="486" cy="4" r="1" opacity="0.2"/>
+<circle cx="623" cy="75" r="1" opacity="0.30000000000000004"/>
+<circle cx="760" cy="146" r="1" opacity="0.4"/>
+<circle cx="97" cy="217" r="1.8" opacity="0.5"/>
+<circle cx="234" cy="18" r="1" opacity="0.6000000000000001"/>
+<circle cx="371" cy="89" r="1" opacity="0.2"/>
+<circle cx="508" cy="160" r="1" opacity="0.30000000000000004"/>
+<circle cx="645" cy="231" r="1" opacity="0.4"/>
+<circle cx="782" cy="32" r="1" opacity="0.5"/>
+<circle cx="119" cy="103" r="1" opacity="0.6000000000000001"/>
+<circle cx="256" cy="174" r="1" opacity="0.2"/>
+<circle cx="393" cy="245" r="1" opacity="0.30000000000000004"/>
+<circle cx="530" cy="46" r="1.8" opacity="0.4"/>
+<circle cx="667" cy="117" r="1" opacity="0.5"/>
+<circle cx="4" cy="188" r="1" opacity="0.6000000000000001"/>
+<circle cx="141" cy="259" r="1" opacity="0.2"/>
+<circle cx="278" cy="60" r="1" opacity="0.30000000000000004"/>
+<circle cx="415" cy="131" r="1" opacity="0.4"/>
+<circle cx="552" cy="202" r="1" opacity="0.5"/>
+<circle cx="689" cy="3" r="1" opacity="0.6000000000000001"/>
+<circle cx="26" cy="74" r="1" opacity="0.2"/>
+<circle cx="163" cy="145" r="1.8" opacity="0.30000000000000004"/>
+<circle cx="300" cy="216" r="1" opacity="0.4"/>
+<circle cx="437" cy="17" r="1" opacity="0.5"/>
+<circle cx="574" cy="88" r="1" opacity="0.6000000000000001"/></g>
+<circle cx="575" cy="160" r="115" fill="url(#halo)"/>
+<circle cx="575" cy="160" r="28" fill="#dfc89c"/>
+<path d="M0 326L87 270 157 310 255 246 372 328 486 290 590 332 700 270 800 315V600H0Z" fill="#263347"/>
+<path d="M0 355L110 321 223 357 348 310 465 361 594 329 690 354 800 320V600H0Z" fill="#182b3b"/>
+<path d="M0 365Q200 345 400 365T800 359V600H0Z" fill="url(#water)"/>
+<g fill="none" stroke="#91b6b5" opacity=".22" stroke-width="2">
+<path d="M20 404Q140 390 260 404M350 403Q470 392 590 403M95 470Q210 458 320 470M520 478Q640 465 760 478M25 560Q150 545 275 560M340 535Q470 521 600 535"/>
+</g>
+<g fill="none" stroke="#e4bc7d" opacity=".24" stroke-width="3">
+<path d="M550 382h50M540 400h70M554 419h44M530 441h84"/>
+</g>
+<path d="M0 508L295 466 310 482 0 528Z" fill="#5b5149"/>
+<path d="M0 528L310 482V497L0 545Z" fill="#292e32"/>
+<path d="M50 517v60M151 503v49M257 487v43" stroke="#20272d" stroke-width="10"/>
+<path d="M205 476v-91" stroke="#363a3c" stroke-width="7"/>
+<circle cx="205" cy="382" r="59" fill="url(#halo)"/>
+<path d="M194 367h22v29h-22z" fill="#efce90"/>
+<path d="M189 366l16-12 16 12zM190 397h30" fill="#1d2931" stroke="#1d2931" stroke-width="3"/>
+<path d="M319 454Q385 467 463 449L443 479Q387 495 340 479Z" fill="#c9a878"/>
+<path d="M330 452L353 437H428L451 451Z" fill="#ddd4bf"/>
+<path d="M363 437v-24h45v24" fill="#405d68"/>
+<path d="M369 417h13v13h-13zM389 417h13v13h-13z" fill="#e8c992"/>
+<path d="M385 413v-52" stroke="#b4c0bd" stroke-width="3"/>
+<path d="M385 362l28 11-28 8z" fill="#779a9b"/>
+<path d="M339 466Q292 459 258 476" fill="none" stroke="#c4b99f" stroke-width="2"/>
+<path d="M337 504Q388 513 450 502M355 523h77" fill="none" stroke="#c9a878" stroke-width="2" opacity=".22"/>
+<path d="M650 600l28-64 42 7 30-26 50 14v69z" fill="#08131f"/>
+</svg>
+

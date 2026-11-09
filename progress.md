@@ -1,5 +1,12 @@
 # Progress
 
+## 2026-11-09 — 10월 5주차 누락 썸네일 추가
+
+- `public/images/posts/october-week5.svg` 추가. 기존 SVG 일러스트와 같은 800×600 규격으로, 현금 확보 후 기다림을 저녁 항구에 정박한 배로 표현했다.
+- `content/posts/2026/October-week5-record.md`와 `docs/preview/October-week5-record.md`에 thumbnail 경로만 추가했다. 글 본문·카드 컴포넌트는 변경하지 않았다.
+- 검증: SVG XML 문법, PNG 변환 후 시각 확인, `pnpm build`(52개 페이지), 생성된 홈·글 목록·본문 HTML의 썸네일 경로, `git diff --check` 통과. 직접 sharp import는 최상위 의존성이 없어 실패했으며 Next.js 의존성 경로에서 해석해 변환했다. 의존성 변경 없음.
+- 다음 작업: 커밋·푸시 후 Vercel 배포 상태, 공개 홈의 썸네일 연결 및 이미지 HTTP 응답 확인.
+
 ## 최신 상태 — 2026-11-09 / 11월 1주차 발행 완료
 
 - 사용자 발행 승인에 따라 `content/posts/2026/November-week1-record.md`의 `draft: true`를 제거했다. 발행 직전 사용자가 수정한 문단 연결, 팔란티어·스페이스X·메타에 대한 평가, 패시브 투자 회고, 반등을 기다리는 심정을 그대로 보존했다.
