@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="폭풍이 지나간 새벽, 항구를 떠나 다시 바다로 나가는 돛단배">
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#0f1730"/><stop offset=".55" stop-color="#3a3f66"/><stop offset=".85" stop-color="#b9785f"/><stop offset="1" stop-color="#f0b877"/></linearGradient>
+<linearGradient id="sea" x2="0" y2="1"><stop stop-color="#3a4c66"/><stop offset="1" stop-color="#0a1224"/></linearGradient>
+<radialGradient id="sun"><stop stop-color="#ffe6ad" stop-opacity=".9"/><stop offset="1" stop-color="#ffe6ad" stop-opacity="0"/></radialGradient>
+<linearGradient id="wake" x2="0" y2="1"><stop stop-color="#ffd696" stop-opacity=".55"/><stop offset="1" stop-color="#ffd696" stop-opacity="0"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="14"/></filter>
+<filter id="starblur"><feGaussianBlur stdDeviation="1.2"/></filter>
+</defs>
+<path fill="url(#sky)" d="M0 0h800v600H0z"/>
+<g fill="#dfe6ff">
+<circle cx="70" cy="60" r="1.2" opacity=".7"/><circle cx="150" cy="110" r="1" opacity=".5"/><circle cx="230" cy="45" r="1.4" opacity=".8"/><circle cx="310" cy="95" r="1" opacity=".5"/><circle cx="390" cy="35" r="1.2" opacity=".6"/><circle cx="470" cy="80" r="1" opacity=".5"/><circle cx="545" cy="30" r="1.3" opacity=".7"/><circle cx="620" cy="70" r="1" opacity=".4"/><circle cx="700" cy="40" r="1.2" opacity=".6"/><circle cx="760" cy="105" r="1" opacity=".4"/><circle cx="110" cy="170" r="1" opacity=".35"/><circle cx="270" cy="160" r="1" opacity=".3"/><circle cx="430" cy="150" r="1" opacity=".3"/><circle cx="670" cy="150" r="1" opacity=".3"/>
+<circle cx="230" cy="45" r="3" opacity=".5" filter="url(#starblur)"/><circle cx="545" cy="30" r="3" opacity=".45" filter="url(#starblur)"/>
+</g>
+<ellipse cx="170" cy="150" rx="260" ry="55" fill="#060b1a" opacity=".6" filter="url(#blur)"/>
+<ellipse cx="60" cy="235" rx="200" ry="40" fill="#0a1022" opacity=".5" filter="url(#blur)"/>
+<ellipse cx="640" cy="215" rx="190" ry="30" fill="#6c5a78" opacity=".35" filter="url(#blur)"/>
+<circle cx="560" cy="352" r="150" fill="url(#sun)"/>
+<circle cx="560" cy="352" r="34" fill="#ffe9b8"/>
+<path fill="#1a2238" d="M0 350l70-38 60 22 55-30 70 46H0z" opacity=".85"/>
+<path fill="url(#sea)" d="M0 350h800v250H0z"/>
+<path fill="url(#wake)" d="M520 350h80l60 250H460z"/>
+<path d="M0 392q70-14 140 0t140 0t140 0t140 0t140 0t100 0M0 448q80-18 160 0t160 0t160 0t160 0t160 0M0 520q95-20 190 0t190 0t190 0t230 0" stroke="#7f95a8" stroke-width="2" opacity=".3" fill="none"/>
+<path fill="#0b1222" d="M0 600V470l60-14 50 18 40-8 30 20v114z"/>
+<path fill="#0b1222" d="M96 474v-70h10v70zM90 404h22l-11-16z"/>
+<circle cx="101" cy="400" r="5" fill="#ffd88a"/>
+<circle cx="101" cy="400" r="26" fill="url(#sun)" opacity=".7"/>
+<path fill="#0b1222" d="M342 478h120l-18 24h-86z"/>
+<path fill="#0b1222" d="M398 478V380h4v98z"/>
+<path fill="#e9dcc6" d="M404 388l46 82h-46z" opacity=".92"/>
+<path fill="#c9b9a2" d="M396 400l-36 70h36z" opacity=".9"/>
+<path d="M330 506q40-8 80 0t80 0M300 524q50-9 100 0t100 0" stroke="#ffd696" stroke-width="2" opacity=".35" fill="none"/>
+<path d="M150 492q60 18 190 6" stroke="#9fb3c2" stroke-width="1.5" opacity=".3" fill="none" stroke-dasharray="3 9"/>
+</svg>
